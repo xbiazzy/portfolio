@@ -1728,6 +1728,24 @@
         let n = 1284;
         if (!reduced) setInterval(() => { n += Math.floor(Math.random() * 4) + 1; likes.textContent = n.toLocaleString('pt-BR'); }, 900);
 
+        // Links internos rolam até a seção sem mostrar "#secao" no endereço
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const id = a.getAttribute('href');
+                const target = id === '#topo' ? document.body : document.querySelector(id);
+                if (!target) return;
+                e.preventDefault();
+                if (id === '#topo') window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+                else target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+            });
+        });
+        // Se alguém abrir um link antigo com "#secao", vai até a seção e limpa o endereço
+        if (location.hash) {
+            const t = document.querySelector(location.hash);
+            if (t) setTimeout(() => t.scrollIntoView(), 50);
+            history.replaceState(null, '', location.pathname + location.search);
+        }
+
         // Voltar ao topo
         document.getElementById('toTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }));
 
