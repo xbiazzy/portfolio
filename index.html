@@ -1127,16 +1127,15 @@
             .footer-grid { grid-template-columns: 1fr; }
             .footer-bottom { padding-bottom: 90px; }
         }
+        /* Quem pediu "reduzir movimento" no celular ainda vê as animações,
+           só sem os movimentos grandes (flutuar, deslizar, parallax) */
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation: none !important; transition: none !important; }
-            .hero h1 .w, .fade-in, .blk { opacity: 1 !important; transform: none !important; }
-            .typed { width: auto !important; }
-            .vid-cap.b, .chart-dot { display: none; }
-            .vid-cap span, .sw i, .type-sample, .stamp, .toast, .chart .area { opacity: 1 !important; }
-            .stamp { transform: rotate(-12deg); }
-            .chart .line, .logo-draw circle, .logo-draw path { stroke-dashoffset: 0 !important; }
-            .js .rv, .js .rv-l, .js .rv-r { opacity: 1; transform: none; }
             html { scroll-behavior: auto; }
+            .orb, .browser, .phone, .float-chip, .mini-phone, .flyer, .cta-box::before { animation: none !important; }
+            .hero h1 .w { transform: none; animation-name: fadeOnly; }
+            .hero h1 .w.grad-text { animation-name: fadeOnly, gradMove; }
+            .js .rv, .js .rv-l, .js .rv-r { transform: none; }
+            @keyframes fadeOnly { from { opacity: 0; } to { opacity: 1; } }
         }
     </style>
     <script>document.documentElement.classList.add('js');</script>
@@ -1672,7 +1671,6 @@
             const dec = parseInt(el.dataset.decimals || '0', 10);
             const suffix = el.dataset.suffix || '';
             const fmt = v => v.toFixed(dec).replace('.', ',') + suffix;
-            if (reduced) { el.textContent = fmt(target); return; }
             const start = performance.now();
             const dur = 1600;
             const tick = (now) => {
@@ -1700,7 +1698,7 @@
             entries.forEach(e => e.target.classList.toggle('play', e.isIntersecting));
         }, { threshold: 0.1 });
         document.querySelectorAll('.scene').forEach(el => sceneIO.observe(el));
-        if (!reduced) {
+        {
             let tickN = 0;
             setInterval(() => {
                 tickN++;
@@ -1726,7 +1724,7 @@
         // Curtidas subindo no post do hero
         const likes = document.getElementById('likes');
         let n = 1284;
-        if (!reduced) setInterval(() => { n += Math.floor(Math.random() * 4) + 1; likes.textContent = n.toLocaleString('pt-BR'); }, 900);
+        setInterval(() => { n += Math.floor(Math.random() * 4) + 1; likes.textContent = n.toLocaleString('pt-BR'); }, 900);
 
         // Links internos rolam até a seção sem mostrar "#secao" no endereço
         document.querySelectorAll('a[href^="#"]').forEach(a => {
