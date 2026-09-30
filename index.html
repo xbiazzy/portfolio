@@ -3,86 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camargo Tech & Design | Branding, Social Media, Tráfego Pago e Sites</title>
-    <meta name="description" content="Assessoria 360° para sua marca: branding, registro no INPI, design gráfico, edição de vídeos, gestão de redes sociais, tráfego pago e sites. Organização total, zero estresse.">
-    <meta name="theme-color" content="#101527">
+    <title>Camargo Tech & Design | Sites, Redes Sociais, Tráfego Pago e Branding</title>
+    <meta name="description" content="Sites profissionais, landing pages e gestão de redes sociais. Também cuidamos de edição de vídeos, tráfego pago, branding, registro no INPI e organização dos arquivos da sua marca.">
+    <meta name="theme-color" content="#0b1022">
     <link rel="canonical" href="https://camargotechdesign.com.br/">
     <meta property="og:title" content="Camargo Tech & Design">
-    <meta property="og:description" content="Marketing que organiza e vende. Branding, redes sociais, tráfego pago e sites em uma assessoria completa.">
+    <meta property="og:description" content="Sites profissionais e redes sociais que vendem. Assessoria completa para a sua marca.">
     <meta property="og:image" content="https://camargotechdesign.com.br/icon-camargo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://camargotechdesign.com.br/">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         /* =========================================
-           TOKENS (paleta do manual da marca)
+           TOKENS
            ========================================= */
         :root {
-            --ink: #101527;
+            --bg: #0b1022;
+            --bg-2: #101527;
+            --surface: #151f38;
+            --surface-2: #1b2945;
             --navy: #233652;
             --steel: #83acbd;
-            --steel-text: #3d6a7d;
-            --fog: #e6e6e6;
-            --paper: #f2f3f5;
-            --white: #ffffff;
-            --gray: #bdbdbd;
-            --line: #d3d7de;
-            --muted: #4a5468;
+            --steel-light: #a8cddc;
+            --text: #eef2f8;
+            --muted: #a9b5cb;
+            --line: rgba(131, 172, 189, 0.16);
+            --line-strong: rgba(131, 172, 189, 0.35);
             --wa: #25d366;
-            --wa-dark: #128c7e;
-
-            --f-display: 'Alfa Slab One', 'Rockwell', Georgia, serif;
-            --f-cond: 'Saira Condensed', 'Arial Narrow', sans-serif;
-            --f-body: 'Saira', system-ui, sans-serif;
-
-            --wrap: 1180px;
+            --grad: linear-gradient(135deg, #a8cddc 0%, #83acbd 45%, #4f7fa0 100%);
+            --font: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            --wrap: 1200px;
             --gutter: clamp(16px, 4vw, 40px);
-            --tilt: -4deg;
+            --ease: cubic-bezier(.2, .8, .2, 1);
         }
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        html { scroll-behavior: smooth; scroll-padding-top: 84px; overflow-x: clip; }
         body {
-            font-family: var(--f-body);
+            font-family: var(--font);
             font-size: 1.0625rem;
             line-height: 1.65;
-            color: var(--ink);
-            background: var(--paper);
+            color: var(--text);
+            background: var(--bg);
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
         img { max-width: 100%; height: auto; display: block; }
         a { color: inherit; }
-        :focus-visible { outline: 3px solid var(--steel); outline-offset: 3px; border-radius: 4px; }
+        :focus-visible { outline: 3px solid var(--steel); outline-offset: 3px; border-radius: 6px; }
+        .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); position: relative; }
+        section { padding: clamp(80px, 10vw, 130px) 0; position: relative; }
 
-        .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
-        section { padding: clamp(72px, 10vw, 128px) 0; }
-
-        /* =========================================
-           TIPOGRAFIA
-           ========================================= */
-        h1, h2 { font-family: var(--f-display); font-weight: 400; line-height: 1.02; letter-spacing: -0.01em; }
-        h2 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); margin-bottom: 20px; }
-        h3 {
-            font-family: var(--f-cond);
-            font-weight: 700;
-            font-size: 1.45rem;
-            line-height: 1.2;
-            margin-bottom: 8px;
-        }
-        .lead { font-size: clamp(1.1rem, 1.6vw, 1.25rem); color: var(--muted); max-width: 58ch; }
-        .kicker {
-            font-family: var(--f-cond);
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--steel-text);
-            margin-bottom: 10px;
-        }
+        h1, h2, h3 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; }
+        h2 { font-size: clamp(2.1rem, 4.6vw, 3.6rem); margin-bottom: 18px; }
+        h3 { font-size: 1.35rem; letter-spacing: -0.02em; margin-bottom: 8px; }
+        p { color: var(--muted); }
         p + p { margin-top: 14px; }
-        strong { font-weight: 600; }
+        strong { color: var(--text); font-weight: 700; }
+        .lead { font-size: clamp(1.1rem, 1.6vw, 1.25rem); max-width: 60ch; }
+        .grad-text {
+            background: var(--grad);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradMove 6s ease-in-out infinite;
+        }
+        @keyframes gradMove { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .9rem;
+            font-weight: 700;
+            color: var(--steel-light);
+            background: rgba(131, 172, 189, .1);
+            border: 1px solid var(--line-strong);
+            padding: 6px 14px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+        }
+        .tag::before {
+            content: '';
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--steel-light);
+            box-shadow: 0 0 0 0 rgba(168, 205, 220, .6);
+            animation: ping 2s infinite;
+        }
+        @keyframes ping {
+            0% { box-shadow: 0 0 0 0 rgba(168, 205, 220, .6); }
+            80%, 100% { box-shadow: 0 0 0 10px rgba(168, 205, 220, 0); }
+        }
 
         /* =========================================
            BOTÕES
@@ -90,542 +106,684 @@
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            font-family: var(--f-cond);
+            font-family: var(--font);
             font-weight: 700;
-            font-size: 1.15rem;
-            letter-spacing: 0.01em;
+            font-size: 1.02rem;
             text-decoration: none;
-            padding: 14px 28px;
+            padding: 15px 28px;
             border-radius: 999px;
-            border: 2px solid transparent;
-            transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+            border: 1.5px solid transparent;
+            position: relative;
+            overflow: hidden;
+            transition: transform .3s var(--ease), box-shadow .3s ease, background-color .3s ease, border-color .3s ease;
         }
         .btn svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
-        .btn:active { transform: translateY(1px); }
-        .btn-wa { background: var(--wa); color: var(--ink); }
-        .btn-wa:hover { background: #1fbd5a; }
-        .btn-ghost { border-color: rgba(230,230,230,.45); color: var(--fog); }
-        .btn-ghost:hover { border-color: var(--fog); background: rgba(230,230,230,.08); }
-        .btn-ink { background: var(--ink); color: var(--fog); }
-        .btn-ink:hover { background: var(--navy); }
+        .btn:hover { transform: translateY(-3px); }
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -120%;
+            width: 60%; height: 100%;
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+            transform: skewX(-20deg);
+            transition: left .7s ease;
+        }
+        .btn:hover::after { left: 140%; }
+        .btn-wa { background: var(--wa); color: #06210f; box-shadow: 0 10px 30px rgba(37, 211, 102, .3); }
+        .btn-wa:hover { box-shadow: 0 14px 40px rgba(37, 211, 102, .45); }
+        .btn-ghost { border-color: var(--line-strong); color: var(--text); background: rgba(131,172,189,.06); }
+        .btn-ghost:hover { border-color: var(--steel-light); background: rgba(131,172,189,.14); }
 
         /* =========================================
            NAVBAR
            ========================================= */
         .nav {
-            position: sticky;
-            top: 0;
+            position: fixed;
+            top: 0; left: 0; right: 0;
             z-index: 50;
-            background: var(--ink);
-            border-bottom: 1px solid rgba(131,172,189,.18);
+            transition: background-color .4s ease, border-color .4s ease;
+            border-bottom: 1px solid transparent;
         }
-        .nav .wrap {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-            height: 72px;
+        .nav.scrolled {
+            background: rgba(11, 16, 34, .82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-color: var(--line);
         }
+        .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
         .nav-logo img { height: 40px; width: auto; }
-        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links { display: flex; gap: 6px; list-style: none; }
         .nav-links a {
-            font-family: var(--f-cond);
+            display: block;
+            padding: 8px 14px;
+            border-radius: 999px;
             font-weight: 600;
-            font-size: 1.08rem;
-            color: var(--gray);
+            font-size: .95rem;
+            color: var(--muted);
             text-decoration: none;
-            transition: color .2s ease;
+            transition: color .25s ease, background-color .25s ease;
         }
-        .nav-links a:hover { color: var(--white); }
-        .nav .btn { padding: 9px 20px; font-size: 1.05rem; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text); background: rgba(131,172,189,.12); }
+        .nav .btn { padding: 10px 20px; font-size: .95rem; }
         .nav-toggle {
             display: none;
-            background: none;
-            border: 0;
-            color: var(--fog);
-            font-family: var(--f-cond);
-            font-weight: 700;
-            font-size: 1.1rem;
+            width: 44px; height: 44px;
+            border: 1px solid var(--line-strong);
+            border-radius: 12px;
+            background: transparent;
             cursor: pointer;
-            padding: 8px 4px;
+            position: relative;
         }
+        .nav-toggle span {
+            position: absolute;
+            left: 11px;
+            width: 20px; height: 2px;
+            border-radius: 2px;
+            background: var(--text);
+            transition: transform .35s var(--ease), opacity .3s ease;
+        }
+        .nav-toggle span:nth-child(1) { top: 15px; }
+        .nav-toggle span:nth-child(2) { top: 21px; }
+        .nav-toggle span:nth-child(3) { top: 27px; }
+        .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+        .nav-toggle.open span:nth-child(2) { opacity: 0; }
+        .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
         .mobile-menu {
-            display: none;
-            background: var(--ink);
-            border-top: 1px solid rgba(131,172,189,.18);
-            padding: 8px var(--gutter) 24px;
+            position: fixed;
+            inset: 76px 0 0 0;
+            z-index: 49;
+            background: rgba(11, 16, 34, .97);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 24px var(--gutter);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-12px);
+            transition: opacity .35s ease, transform .35s var(--ease), visibility .35s;
         }
-        .mobile-menu.open { display: block; }
-        .mobile-menu a {
-            display: block;
-            font-family: var(--f-cond);
-            font-weight: 600;
-            font-size: 1.35rem;
-            color: var(--fog);
+        .mobile-menu.open { opacity: 1; visibility: visible; transform: none; }
+        .mobile-menu a:not(.btn) {
+            font-weight: 700;
+            font-size: 1.5rem;
             text-decoration: none;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(131,172,189,.15);
+            padding: 14px 0;
+            border-bottom: 1px solid var(--line);
         }
+        .mobile-menu .btn { margin-top: 24px; font-size: 1.05rem; }
 
         /* =========================================
            HERO
            ========================================= */
         .hero {
-            background: var(--ink);
-            color: var(--fog);
-            padding: clamp(64px, 9vw, 120px) 0 clamp(72px, 10vw, 130px);
+            position: relative;
+            min-height: 100vh;
+            padding: 140px 0 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--line) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 65%);
+            -webkit-mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 65%);
+            opacity: .6;
+            pointer-events: none;
+        }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; }
+        .orb.o1 { width: 520px; height: 520px; top: -120px; right: -80px; background: rgba(79, 127, 160, .45); animation: drift 14s ease-in-out infinite; }
+        .orb.o2 { width: 420px; height: 420px; bottom: -160px; left: -120px; background: rgba(35, 54, 82, .9); animation: drift 18s ease-in-out infinite reverse; }
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-40px, 30px) scale(1.1); }
         }
         .hero .wrap {
             display: grid;
-            grid-template-columns: 1.35fr 1fr;
-            gap: clamp(40px, 6vw, 80px);
+            grid-template-columns: 1.05fr 1fr;
+            gap: clamp(40px, 5vw, 72px);
             align-items: center;
         }
-        .hero-place {
-            font-family: var(--f-cond);
-            font-weight: 600;
-            font-size: 1.15rem;
-            color: var(--steel);
-            margin-bottom: 28px;
+        .hero h1 { font-size: clamp(2.6rem, 5.8vw, 4.8rem); margin-bottom: 24px; }
+        .hero h1 .w {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(40px) rotate(3deg);
+            animation: wordIn .8s var(--ease) forwards;
         }
-        .hero h1 {
-            font-size: clamp(2.8rem, 7.4vw, 6.2rem);
-            line-height: .95;
-            color: var(--fog);
-            transform: rotate(var(--tilt));
-            transform-origin: left bottom;
-            margin-bottom: 44px;
-            animation: tiltIn .9s cubic-bezier(.2,.8,.2,1) both;
-        }
-        .hero h1 .dot { color: var(--steel); }
-        .hero-text { font-size: 1.2rem; color: var(--gray); max-width: 46ch; margin-bottom: 34px; }
+        @keyframes wordIn { to { opacity: 1; transform: none; } }
+        .hero h1 .w.grad-text { animation: wordIn .8s var(--ease) forwards, gradMove 6s ease-in-out infinite; }
+        .hero-text { font-size: 1.2rem; max-width: 48ch; margin-bottom: 34px; }
         .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
+        .fade-in { opacity: 0; animation: fadeUp .9s var(--ease) forwards; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 
-        /* Amostras de cor – o "manual da marca" */
-        .swatches {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            align-items: end;
-            height: clamp(300px, 36vw, 440px);
+        /* Mockup animado: site sendo montado + post no celular */
+        .mock { position: relative; height: clamp(360px, 40vw, 500px); }
+        .browser {
+            position: absolute;
+            top: 0; left: 0;
+            width: 88%;
+            background: var(--surface);
+            border: 1px solid var(--line-strong);
+            border-radius: 18px;
+            box-shadow: 0 30px 80px rgba(0,0,0,.5);
+            overflow: hidden;
+            animation: floatY 7s ease-in-out infinite;
         }
-        .swatch {
-            height: 100%;
-            border-radius: 14px;
-            padding: 14px 12px;
+        .browser-bar {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--line);
+            background: var(--bg-2);
+        }
+        .browser-bar i { width: 11px; height: 11px; border-radius: 50%; }
+        .browser-bar i:nth-child(1) { background: #ff6b6b; }
+        .browser-bar i:nth-child(2) { background: #ffd166; }
+        .browser-bar i:nth-child(3) { background: #06d6a0; }
+        .url {
+            margin-left: 12px;
+            flex: 1;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--muted);
+            background: var(--surface);
+            border-radius: 999px;
+            padding: 5px 14px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .typed { display: inline-block; overflow: hidden; vertical-align: bottom; color: var(--steel-light); font-weight: 700; width: 0; animation: typing 9s steps(17) infinite; }
+        @keyframes typing { 0% { width: 0; } 20%, 90% { width: 17ch; } 100% { width: 0; } }
+        .screen { padding: 18px; display: grid; gap: 12px; }
+        .blk { border-radius: 10px; background: var(--surface-2); opacity: 0; animation: build 9s var(--ease) infinite; }
+        .blk.nav-b { height: 18px; background: linear-gradient(90deg, var(--surface-2) 30%, transparent 30% 55%, var(--surface-2) 55%); animation-delay: .4s; }
+        .blk.hero-b {
+            height: clamp(110px, 12vw, 150px);
+            background: linear-gradient(120deg, #2b4a6b, #4f7fa0 60%, #83acbd);
+            animation-delay: .9s;
+            padding: 18px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            font-family: var(--f-cond);
-            font-weight: 600;
-            font-size: .98rem;
-            line-height: 1.25;
-            animation: rise .8s cubic-bezier(.2,.8,.2,1) both;
+            justify-content: center;
+            gap: 10px;
         }
-        .swatch span { display: block; font-weight: 500; opacity: .75; }
-        .swatch:nth-child(1) { height: 100%; background: var(--ink); color: var(--fog); border: 1px solid rgba(131,172,189,.35); animation-delay: .25s; }
-        .swatch:nth-child(2) { height: 86%; background: var(--navy); color: var(--fog); animation-delay: .35s; }
-        .swatch:nth-child(3) { height: 72%; background: var(--steel); color: var(--ink); animation-delay: .45s; }
-        .swatch:nth-child(4) { height: 58%; background: var(--fog); color: var(--ink); animation-delay: .55s; }
-        .swatch-caption {
-            font-family: var(--f-cond);
-            font-size: 1.05rem;
-            color: var(--gray);
-            margin-top: 16px;
-            max-width: 40ch;
+        .blk.hero-b span { display: block; height: 12px; border-radius: 6px; background: rgba(255,255,255,.85); }
+        .blk.hero-b span:nth-child(1) { width: 62%; height: 16px; }
+        .blk.hero-b span:nth-child(2) { width: 44%; opacity: .7; }
+        .blk.hero-b span:nth-child(3) { width: 90px; height: 24px; border-radius: 999px; background: var(--wa); margin-top: 6px; }
+        .cards-b { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .cards-b .blk { height: clamp(56px, 7vw, 80px); }
+        .cards-b .blk:nth-child(1) { animation-delay: 1.4s; }
+        .cards-b .blk:nth-child(2) { animation-delay: 1.6s; }
+        .cards-b .blk:nth-child(3) { animation-delay: 1.8s; }
+        @keyframes build {
+            0% { opacity: 0; transform: translateY(14px) scale(.96); }
+            8%, 88% { opacity: 1; transform: none; }
+            100% { opacity: 0; transform: translateY(-6px); }
         }
-
-        @keyframes tiltIn {
-            from { opacity: 0; transform: rotate(0deg) translateY(24px); }
-            to   { opacity: 1; transform: rotate(var(--tilt)) translateY(0); }
+        .phone {
+            position: absolute;
+            right: 0; bottom: 0;
+            width: clamp(150px, 15vw, 196px);
+            background: var(--bg-2);
+            border: 1px solid var(--line-strong);
+            border-radius: 28px;
+            padding: 12px;
+            box-shadow: 0 30px 70px rgba(0,0,0,.6);
+            animation: floatY 6s ease-in-out infinite reverse;
         }
-        @keyframes rise {
-            from { opacity: 0; transform: translateY(40px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        /* =========================================
-           SOBRE + ÍNDICE DE SERVIÇOS
-           ========================================= */
-        .about { background: var(--paper); }
-        .about-head {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: clamp(32px, 6vw, 80px);
-            align-items: start;
-            margin-bottom: clamp(48px, 7vw, 80px);
-        }
-        .about-head p { color: var(--muted); }
-        .about-head .punch { color: var(--ink); font-weight: 600; }
-
-        .index {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: clamp(32px, 6vw, 80px);
-            border-top: 2px solid var(--ink);
-        }
-        .index a {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 4px 16px;
-            padding: 22px 0;
-            border-bottom: 1px solid var(--line);
-            text-decoration: none;
-            transition: padding-left .25s ease;
-        }
-        .index strong {
-            font-family: var(--f-display);
-            font-weight: 400;
-            font-size: 1.45rem;
-            line-height: 1.15;
-        }
-        .index small { grid-column: 1; color: var(--muted); font-size: .98rem; }
-        .index .arrow {
-            grid-row: 1 / span 2;
-            grid-column: 2;
-            align-self: center;
-            width: 36px; height: 36px;
-            border-radius: 50%;
-            border: 1.5px solid var(--line);
-            display: grid; place-items: center;
-            transition: background-color .2s ease, border-color .2s ease;
-        }
-        .index .arrow svg { width: 16px; height: 16px; fill: var(--ink); }
-        .index a:hover { padding-left: 10px; }
-        .index a:hover .arrow { background: var(--steel); border-color: var(--steel); }
-
-        .proof {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 40px;
-            margin-top: 40px;
-            font-family: var(--f-cond);
-            font-size: 1.15rem;
-            color: var(--muted);
-        }
-        .proof b { font-family: var(--f-display); font-weight: 400; font-size: 1.7rem; color: var(--ink); margin-right: 6px; }
-
-        /* =========================================
-           LINHAS DE CONTEÚDO (imagem + texto)
-           ========================================= */
-        .row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: clamp(36px, 6vw, 88px);
-            align-items: center;
-        }
-        .row + .row { margin-top: clamp(72px, 9vw, 120px); }
-        .row.flip .media { order: 2; }
-        .media img {
-            border-radius: 18px;
-            width: 100%;
-        }
-        .plate {
-            background: var(--white);
-            border-radius: 22px;
-            padding: clamp(14px, 2vw, 22px);
-            border: 1px solid var(--line);
-        }
-        .plate img { border-radius: 12px; }
-        .bg-white { background: var(--white); }
-        .bg-white .plate { background: var(--paper); }
-
-        .spec { list-style: none; margin-top: 24px; border-top: 1px solid var(--line); }
-        .spec li {
-            display: grid;
-            grid-template-columns: minmax(130px, 34%) 1fr;
-            gap: 18px;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--line);
-            color: var(--muted);
-        }
-        .spec li b {
-            font-family: var(--f-cond);
-            font-weight: 700;
-            font-size: 1.15rem;
-            color: var(--ink);
-            line-height: 1.35;
-        }
-        .note {
-            margin-top: 22px;
-            font-family: var(--f-cond);
-            font-weight: 600;
-            font-size: 1.25rem;
-            color: var(--steel-text);
-        }
-
-        /* =========================================
-           INPI (faixa navy)
-           ========================================= */
-        .inpi { background: var(--navy); color: var(--fog); }
-        .inpi .row { grid-template-columns: 1.2fr 1fr; }
-        .inpi h2 { color: var(--white); }
-        .inpi .kicker { color: var(--steel); }
-        .inpi p { color: #c9d2de; }
-        .inpi-logo {
-            background: var(--white);
-            border-radius: 18px;
-            padding: 20px 28px;
-            max-width: 340px;
-            margin-top: 32px;
-        }
-        .risk {
-            background: var(--ink);
-            border-radius: 22px;
-            padding: clamp(28px, 4vw, 44px);
-            border: 1px solid rgba(131,172,189,.25);
-        }
-        .risk h3 { color: var(--steel); display: flex; align-items: center; gap: 10px; }
-        .risk h3 svg { width: 24px; height: 24px; fill: currentColor; }
-        .risk blockquote {
-            font-family: var(--f-display);
-            font-size: clamp(1.4rem, 2.4vw, 1.9rem);
-            line-height: 1.2;
-            color: var(--white);
-            margin: 14px 0 22px;
-        }
-
-        /* =========================================
-           DESIGN GRÁFICO / VÍDEOS
-           ========================================= */
-        .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; list-style: none; }
-        .tags li {
-            font-family: var(--f-cond);
-            font-weight: 600;
-            font-size: 1.08rem;
-            padding: 8px 16px;
-            border-radius: 999px;
-            background: var(--white);
-            border: 1px solid var(--line);
-        }
-        .phone { display: flex; justify-content: center; }
-        .phone img { max-width: 380px; border-radius: 26px; }
-
-        /* =========================================
-           REDES SOCIAIS – SPRINTS (sequência real)
-           ========================================= */
-        .sprints { background: var(--ink); color: var(--fog); }
-        .sprints h2 { color: var(--white); max-width: 16ch; }
-        .sprints .lead { color: var(--gray); }
-        .steps {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin-top: clamp(48px, 6vw, 72px);
-            border-top: 1px solid rgba(131,172,189,.3);
-        }
-        .steps li {
-            padding: 28px 24px 0 0;
+        .post-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+        .post-head i { width: 26px; height: 26px; border-radius: 50%; background: var(--grad); flex-shrink: 0; }
+        .post-head span { height: 8px; width: 60%; border-radius: 4px; background: var(--surface-2); }
+        .post-img {
+            aspect-ratio: 4 / 5;
+            border-radius: 14px;
+            background: linear-gradient(160deg, #233652, #4f7fa0 55%, #a8cddc);
             position: relative;
+            overflow: hidden;
         }
-        .steps li::before {
+        .post-img::after {
             content: '';
             position: absolute;
-            top: -6px; left: 0;
-            width: 11px; height: 11px;
-            border-radius: 50%;
-            background: var(--steel);
+            inset: 0;
+            background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.25) 50%, transparent 70%);
+            transform: translateX(-100%);
+            animation: sheen 3.5s ease-in-out infinite;
         }
-        .steps .num {
-            display: block;
-            font-family: var(--f-display);
-            font-size: 4.2rem;
-            line-height: 1;
-            color: var(--steel);
-            margin-bottom: 12px;
-        }
-        .steps h3 { color: var(--white); }
-        .steps p { color: var(--gray); font-size: 1rem; max-width: 24ch; }
-        .result {
-            margin-top: clamp(48px, 6vw, 72px);
-            padding-top: 28px;
-            border-top: 1px solid rgba(131,172,189,.3);
-            font-family: var(--f-cond);
-            font-weight: 600;
-            font-size: clamp(1.3rem, 2.4vw, 1.7rem);
-            color: var(--fog);
-        }
-        .result b { color: var(--steel); font-weight: 700; }
-        .networks { color: var(--steel); }
-
-        /* =========================================
-           ORGANIZAÇÃO – árvore de pastas
-           ========================================= */
-        .tree {
-            list-style: none;
-            margin-top: 26px;
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 10px 22px;
-        }
-        .tree li {
-            display: grid;
-            grid-template-columns: 28px 1fr;
-            gap: 12px;
-            padding: 14px 0;
-            border-bottom: 1px dashed var(--line);
-            color: var(--muted);
-            font-size: 1rem;
-        }
-        .tree li:last-child { border-bottom: 0; }
-        .tree svg { width: 26px; height: 26px; fill: var(--steel); margin-top: 1px; }
-        .tree b { display: block; font-family: var(--f-cond); font-weight: 700; font-size: 1.15rem; color: var(--ink); }
-
-        /* =========================================
-           TRÁFEGO PAGO – case
-           ========================================= */
-        .case {
-            margin-top: 28px;
-            background: var(--paper);
-            border-radius: 22px;
-            padding: clamp(24px, 3.5vw, 36px);
-        }
-        .case h3 { margin-bottom: 20px; }
-        .bar-row { margin-bottom: 18px; }
-        .bar-label {
+        @keyframes sheen { 60%, 100% { transform: translateX(100%); } }
+        .post-foot { display: flex; align-items: center; gap: 6px; margin-top: 10px; font-size: .8rem; font-weight: 700; }
+        .post-foot svg { width: 18px; height: 18px; fill: #ff5a7a; animation: beat 1.6s ease-in-out infinite; }
+        @keyframes beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.3); } 30% { transform: scale(1); } }
+        .float-chip {
+            position: absolute;
             display: flex;
-            justify-content: space-between;
-            font-family: var(--f-cond);
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 6px;
+            align-items: center;
+            gap: 10px;
+            background: rgba(21, 31, 56, .92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--line-strong);
+            border-radius: 14px;
+            padding: 10px 14px;
+            font-size: .85rem;
+            font-weight: 700;
+            line-height: 1.3;
+            box-shadow: 0 16px 40px rgba(0,0,0,.45);
+            white-space: nowrap;
         }
-        .bar-label b { font-family: var(--f-display); font-weight: 400; font-size: 1.35rem; }
-        .bar { height: 16px; border-radius: 999px; background: var(--fog); overflow: hidden; }
-        .bar i { display: block; height: 100%; border-radius: 999px; }
-        .bar.in i { width: 21.4%; background: var(--gray); }
-        .bar.out i { width: 100%; background: var(--navy); }
-        .roi {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
-            margin-top: 22px;
-            padding-top: 18px;
+        .float-chip small { display: block; font-weight: 500; color: var(--muted); font-size: .75rem; }
+        .float-chip .ic { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0; }
+        .float-chip .ic svg { width: 18px; height: 18px; fill: currentColor; }
+        .chip-a { left: -4%; bottom: 18%; animation: floatY 5s ease-in-out infinite; }
+        .chip-a .ic { background: rgba(37,211,102,.18); color: var(--wa); }
+        .chip-b { right: 8%; top: -6%; animation: floatY 6.5s ease-in-out infinite reverse; }
+        .chip-b .ic { background: rgba(131,172,189,.2); color: var(--steel-light); }
+        @keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+        /* Faixa de clientes rolando */
+        .marquee {
+            margin-top: clamp(56px, 8vw, 90px);
             border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 20px 0;
+            overflow: hidden;
+            mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
         }
-        .roi b { font-family: var(--f-display); font-weight: 400; font-size: 2.6rem; line-height: 1; color: var(--steel-text); }
-        .roi span { color: var(--muted); font-size: 1rem; }
+        .marquee-track { display: flex; gap: 56px; width: max-content; animation: scrollX 32s linear infinite; }
+        .marquee:hover .marquee-track { animation-play-state: paused; }
+        .marquee span { font-weight: 800; font-size: 1.15rem; color: var(--muted); white-space: nowrap; display: flex; align-items: center; gap: 56px; }
+        .marquee span::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--steel); }
+        @keyframes scrollX { to { transform: translateX(-50%); } }
 
         /* =========================================
-           SITES
+           DIVISOR DE PARTE
            ========================================= */
-        .web-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 44px; }
-        .web-list {
-            list-style: none;
+        .part-head {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
+            grid-template-columns: auto 1fr;
+            gap: clamp(20px, 4vw, 48px);
+            align-items: end;
+            margin-bottom: clamp(48px, 7vw, 80px);
         }
-        .web-list li {
-            background: var(--white);
-            border-radius: 18px;
-            padding: 26px 22px 28px;
+        .part-num {
+            font-size: clamp(5rem, 13vw, 10rem);
+            font-weight: 800;
+            line-height: .8;
+            letter-spacing: -0.06em;
+            color: transparent;
+            -webkit-text-stroke: 1.5px var(--line-strong);
+        }
+        .part-head h2 { margin-bottom: 12px; }
+
+        /* Reveal ao rolar */
+        .js .rv { opacity: 0; transform: translateY(36px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+        .js .rv-l { opacity: 0; transform: translateX(-48px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+        .js .rv-r { opacity: 0; transform: translateX(48px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+        .js .rv.in, .js .rv-l.in, .js .rv-r.in { opacity: 1; transform: none; }
+
+        /* Card com brilho que segue o mouse */
+        .card {
+            position: relative;
+            background: linear-gradient(180deg, var(--surface) 0%, var(--bg-2) 100%);
             border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: clamp(24px, 3vw, 34px);
+            overflow: hidden;
         }
-        .web-list svg { width: 34px; height: 34px; fill: var(--navy); margin-bottom: 18px; }
-        .web-list p { color: var(--muted); font-size: 1rem; }
+        .card, .js .card.rv.in, .js .card.rv-l.in, .js .card.rv-r.in { transition: transform .45s var(--ease), border-color .35s ease, box-shadow .45s ease, opacity .9s var(--ease); }
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(131,172,189,.16), transparent 45%);
+            opacity: 0;
+            transition: opacity .4s ease;
+            pointer-events: none;
+        }
+        .card:hover { transform: translateY(-8px); border-color: var(--line-strong); box-shadow: 0 26px 60px rgba(0,0,0,.4); }
+        .card:hover::before { opacity: 1; }
+        .card > * { position: relative; }
+        .icon {
+            width: 56px; height: 56px;
+            border-radius: 16px;
+            display: grid; place-items: center;
+            background: rgba(131,172,189,.12);
+            border: 1px solid var(--line-strong);
+            color: var(--steel-light);
+            margin-bottom: 22px;
+            transition: transform .45s var(--ease), background-color .3s ease;
+        }
+        .icon svg { width: 28px; height: 28px; fill: currentColor; }
+        .card:hover .icon { transform: rotate(-8deg) scale(1.08); background: rgba(131,172,189,.22); }
+
+        /* =========================================
+           PARTE 01 – SITES
+           ========================================= */
+        .sites { background: radial-gradient(ellipse at top, rgba(35,54,82,.55), transparent 60%), var(--bg); }
+        .site-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .site-grid p { font-size: .98rem; }
+        .site-feature {
+            margin-top: clamp(64px, 8vw, 100px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(36px, 6vw, 80px);
+            align-items: center;
+        }
+        .devices { position: relative; aspect-ratio: 5 / 4; }
+        .laptop {
+            position: absolute;
+            inset: 4% 12% 12% 0;
+            background: var(--surface);
+            border: 1px solid var(--line-strong);
+            border-radius: 18px;
+            padding: 16px;
+            display: grid;
+            grid-template-rows: 14px 1fr auto;
+            gap: 12px;
+            box-shadow: 0 30px 70px rgba(0,0,0,.45);
+        }
+        .laptop .l-nav { border-radius: 7px; background: linear-gradient(90deg, var(--surface-2) 25%, transparent 25% 60%, var(--surface-2) 60%); }
+        .laptop .l-hero { border-radius: 12px; background: linear-gradient(120deg, #2b4a6b, #4f7fa0 60%, #83acbd); position: relative; overflow: hidden; }
+        .laptop .l-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 35%, rgba(255,255,255,.2) 50%, transparent 65%); transform: translateX(-100%); animation: sheen 4s ease-in-out infinite; }
+        .laptop .l-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .laptop .l-row i { height: 48px; border-radius: 10px; background: var(--surface-2); }
+        .mini-phone {
+            position: absolute;
+            right: 0; bottom: 0;
+            width: 30%;
+            aspect-ratio: 9 / 18;
+            background: var(--bg-2);
+            border: 1px solid var(--line-strong);
+            border-radius: 24px;
+            padding: 10px;
+            display: grid;
+            grid-template-rows: 10px 38% 1fr 1fr;
+            gap: 8px;
+            box-shadow: 0 24px 60px rgba(0,0,0,.55);
+            animation: floatY 6s ease-in-out infinite;
+        }
+        .mini-phone i { border-radius: 8px; background: var(--surface-2); }
+        .mini-phone i:nth-child(2) { background: linear-gradient(160deg, #2b4a6b, #83acbd); }
+        .wa-bubble {
+            position: absolute;
+            left: 4%; bottom: 2%;
+            width: 58px; height: 58px;
+            border-radius: 50%;
+            background: var(--wa);
+            color: #06210f;
+            display: grid; place-items: center;
+            animation: pulse 2.2s infinite;
+        }
+        .wa-bubble svg { width: 30px; height: 30px; fill: currentColor; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); }
+            80%, 100% { box-shadow: 0 0 0 22px rgba(37,211,102,0); }
+        }
+        .checks { list-style: none; margin: 26px 0 34px; display: grid; gap: 14px; }
+        .checks li { display: flex; gap: 14px; align-items: flex-start; font-weight: 600; }
+        .checks svg { width: 26px; height: 26px; flex-shrink: 0; fill: var(--bg); background: var(--steel); border-radius: 50%; padding: 5px; }
+
+        /* =========================================
+           PARTE 02 – REDES SOCIAIS E MARKETING
+           ========================================= */
+        .social { background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%); border-top: 1px solid var(--line); }
+        .block + .block { margin-top: clamp(80px, 10vw, 130px); }
+        .block-head { max-width: 760px; margin-bottom: 44px; }
+        .block-head h3 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); letter-spacing: -0.03em; margin-bottom: 14px; }
+
+        /* Sprints */
+        .timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .timeline::before, .timeline::after {
+            content: '';
+            position: absolute;
+            top: 36px; left: 12.5%; right: 12.5%;
+            height: 2px;
+            background: var(--line);
+        }
+        .timeline::after { background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform 1.8s var(--ease) .2s; }
+        .timeline.in::after { transform: scaleX(1); }
+        .step { text-align: center; padding: 0 8px; }
+        .step h3 { margin-bottom: 6px; }
+        .step-dot {
+            position: relative;
+            z-index: 1;
+            width: 72px; height: 72px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            display: grid; place-items: center;
+            background: var(--surface);
+            border: 2px solid var(--line-strong);
+            color: var(--steel-light);
+            transition: background-color .5s ease, color .5s ease, border-color .5s ease, transform .5s var(--ease);
+            transition-delay: var(--dd, 0s);
+        }
+        .step-dot svg { width: 28px; height: 28px; fill: currentColor; }
+        .timeline.in .step-dot { background: var(--steel); color: var(--bg); border-color: var(--steel-light); transform: scale(1.06); }
+        .step-num { display: block; font-size: .85rem; font-weight: 800; color: var(--steel); margin-bottom: 4px; }
+        .step p { font-size: .98rem; max-width: 24ch; margin: 0 auto; }
+        .result {
+            margin-top: 48px;
+            text-align: center;
+            font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+
+        /* Vídeos + organização lado a lado */
+        .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+        .duo .card h3 { font-size: 1.7rem; margin-bottom: 12px; }
+        .video-media { margin-top: 28px; border-radius: 16px; overflow: hidden; position: relative; }
+        .video-media img { width: 100%; transition: transform .8s var(--ease); }
+        .card:hover .video-media img { transform: scale(1.05); }
+        .play {
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 64px; height: 64px;
+            margin: -32px 0 0 -32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.92);
+            display: grid; place-items: center;
+            animation: pulseW 2.2s infinite;
+        }
+        .play svg { width: 26px; height: 26px; fill: var(--bg); margin-left: 4px; }
+        @keyframes pulseW {
+            0% { box-shadow: 0 0 0 0 rgba(255,255,255,.55); }
+            80%, 100% { box-shadow: 0 0 0 20px rgba(255,255,255,0); }
+        }
+        .pills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin-top: 18px; }
+        .pills li {
+            font-size: .88rem;
+            font-weight: 700;
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: rgba(131,172,189,.1);
+            border: 1px solid var(--line-strong);
+            color: var(--steel-light);
+        }
+        .tree { list-style: none; margin-top: 26px; display: grid; gap: 12px; }
+        .tree li {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            background: rgba(131,172,189,.06);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 14px 16px;
+        }
+        .js .tree li.rv.in { transition: transform .4s var(--ease), background-color .3s ease, opacity .9s var(--ease); transition-delay: 0s; }
+        .tree li:hover { transform: translateX(8px); background: rgba(131,172,189,.12); }
+        .tree svg { width: 34px; height: 34px; flex-shrink: 0; fill: var(--steel); }
+        .tree b { display: block; font-size: 1.02rem; }
+        .tree span { font-size: .92rem; color: var(--muted); }
+
+        /* Tráfego pago */
+        .ads { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+        .bar-row + .bar-row { margin-top: 22px; }
+        .bar-label { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 8px; }
+        .bar-label span { color: var(--muted); font-weight: 600; }
+        .bar { height: 14px; border-radius: 999px; background: rgba(131,172,189,.12); overflow: hidden; }
+        .bar i { display: block; height: 100%; border-radius: 999px; width: 0; transition: width 1.6s var(--ease) .3s; }
+        .bar.in-b i { background: #52627e; }
+        .bar.out-b i { background: linear-gradient(90deg, #4f7fa0, var(--wa)); }
+        .ads-case.in .bar.in-b i { width: 21.4%; }
+        .ads-case.in .bar.out-b i { width: 100%; }
+        .roi { display: flex; align-items: baseline; gap: 14px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+        .roi b { font-size: clamp(3rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1; }
+        .roi span { color: var(--muted); font-weight: 600; }
+        .ads-img { border-radius: 22px; overflow: hidden; background: #fff; }
+        .ads-img img { transition: transform .8s var(--ease); }
+        .ads:hover .ads-img img { transform: scale(1.04) rotate(-1deg); }
+
+        /* Marca e materiais */
+        .brand-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+        .brand-grid .card { padding: 0; }
+        .brand-img { background: #eef1f5; aspect-ratio: 16 / 10; overflow: hidden; }
+        .brand-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+        .brand-img.contain img { object-fit: contain; padding: 12%; }
+        .brand-grid .card:hover .brand-img img { transform: scale(1.06); }
+        .brand-body { padding: 26px 26px 30px; }
+        .mini-list { list-style: none; margin-top: 14px; display: grid; gap: 8px; }
+        .mini-list li { display: flex; gap: 10px; font-size: .95rem; color: var(--muted); }
+        .mini-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--steel); margin-top: 10px; flex-shrink: 0; }
+        .warn {
+            margin-top: 16px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: rgba(255, 196, 87, .08);
+            border: 1px solid rgba(255, 196, 87, .3);
+            font-size: .92rem;
+            color: #f3d9a4;
+        }
+        .warn b { color: #ffc457; }
+
+        /* =========================================
+           NÚMEROS
+           ========================================= */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            background: var(--surface);
+            overflow: hidden;
+        }
+        .stat { padding: clamp(28px, 4vw, 44px); text-align: center; }
+        .stat + .stat { border-left: 1px solid var(--line); }
+        .stat b { display: block; font-size: clamp(2.6rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1; margin-bottom: 8px; }
+        .stat span { color: var(--muted); font-weight: 600; }
 
         /* =========================================
            CLIENTES
            ========================================= */
-        .clients {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-            background: var(--line);
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            overflow: hidden;
-            margin-top: 44px;
-        }
-        .clients li {
-            background: var(--white);
-            padding: 30px 24px;
-            display: flex;
-            flex-direction: column;
-        }
-        .clients .logo {
-            height: 84px;
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .clients .logo img { max-height: 76px; max-width: 170px; width: auto; object-fit: contain; }
-        .clients h3 { font-size: 1.25rem; margin-bottom: 4px; }
-        .clients p { color: var(--muted); font-size: .95rem; line-height: 1.5; }
+        .clients { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; }
+        .client { background: #fff; color: #101527; border-radius: 20px; padding: 26px 22px; }
+        .client, .js .client.rv.in { transition: transform .45s var(--ease), box-shadow .45s ease, opacity .9s var(--ease); }
+        .client:hover { transform: translateY(-8px) rotate(-1deg); box-shadow: 0 24px 50px rgba(0,0,0,.45); }
+        .client .logo { height: 76px; display: flex; align-items: center; margin-bottom: 18px; }
+        .client .logo img { max-height: 70px; max-width: 160px; width: auto; object-fit: contain; filter: grayscale(1); opacity: .8; transition: filter .4s ease, opacity .4s ease; }
+        .client:hover .logo img { filter: none; opacity: 1; }
+        .client h3 { font-size: 1.1rem; margin-bottom: 4px; }
+        .client p { color: #55607a; font-size: .9rem; line-height: 1.5; }
 
         /* =========================================
            FAQ
            ========================================= */
-        .faq .wrap { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
-        .faq-list { border-top: 2px solid var(--ink); }
-        .faq details { border-bottom: 1px solid var(--line); }
-        .faq summary {
-            list-style: none;
-            cursor: pointer;
+        .faq-wrap { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+        .acc-item { border-bottom: 1px solid var(--line); }
+        .acc-item:first-child { border-top: 1px solid var(--line); }
+        .acc-btn {
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
-            padding: 22px 0;
-            font-family: var(--f-cond);
+            padding: 24px 0;
+            background: none;
+            border: 0;
+            color: var(--text);
+            font-family: var(--font);
             font-weight: 700;
-            font-size: 1.3rem;
-            line-height: 1.3;
+            font-size: 1.12rem;
+            text-align: left;
+            cursor: pointer;
         }
-        .faq summary::-webkit-details-marker { display: none; }
-        .faq summary::after {
-            content: '+';
+        .acc-btn .pm {
             flex-shrink: 0;
-            width: 34px; height: 34px;
+            width: 36px; height: 36px;
             border-radius: 50%;
-            border: 1.5px solid var(--line);
-            display: grid; place-items: center;
-            font-family: var(--f-body);
-            font-weight: 500;
-            font-size: 1.3rem;
-            transition: transform .25s ease, background-color .2s ease;
+            border: 1px solid var(--line-strong);
+            position: relative;
+            transition: transform .4s var(--ease), background-color .3s ease;
         }
-        .faq details[open] summary::after { transform: rotate(45deg); background: var(--steel); border-color: var(--steel); }
-        .faq details p { color: var(--muted); padding: 0 50px 24px 0; max-width: 64ch; }
+        .acc-btn .pm::before, .acc-btn .pm::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 14px; height: 2px;
+            margin: -1px 0 0 -7px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: transform .4s var(--ease);
+        }
+        .acc-btn .pm::after { transform: rotate(90deg); }
+        .acc-item.open .pm { background: var(--steel); border-color: var(--steel); transform: rotate(180deg); }
+        .acc-item.open .pm::before, .acc-item.open .pm::after { background: var(--bg); }
+        .acc-item.open .pm::after { transform: rotate(0deg); }
+        .acc-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s var(--ease); }
+        .acc-item.open .acc-panel { grid-template-rows: 1fr; }
+        .acc-panel > div { overflow: hidden; }
+        .acc-panel p { padding: 0 56px 24px 0; }
 
         /* =========================================
-           RODAPÉ / CTA FINAL
+           CTA FINAL / RODAPÉ
            ========================================= */
-        .footer { background: var(--ink); color: var(--fog); padding: clamp(80px, 11vw, 140px) 0 36px; overflow: hidden; }
-        .footer h2 {
-            font-size: clamp(2.6rem, 7vw, 6rem);
-            color: var(--fog);
-            transform: rotate(var(--tilt));
-            transform-origin: left bottom;
-            max-width: 14ch;
-            margin-bottom: 44px;
+        .cta-box {
+            position: relative;
+            text-align: center;
+            border-radius: 32px;
+            padding: clamp(56px, 8vw, 96px) var(--gutter);
+            background: linear-gradient(135deg, #1b2a47 0%, #233652 50%, #2f5570 100%);
+            border: 1px solid var(--line-strong);
+            overflow: hidden;
         }
-        .footer h2 .dot { color: var(--steel); }
-        .footer-text { color: var(--gray); font-size: 1.2rem; max-width: 46ch; margin-bottom: 32px; }
-        .footer-base {
-            margin-top: clamp(72px, 9vw, 110px);
-            padding-top: 28px;
-            border-top: 1px solid rgba(131,172,189,.2);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            font-size: .95rem;
-            color: var(--gray);
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            width: 600px; height: 600px;
+            top: -300px; left: 50%;
+            margin-left: -300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(168,205,220,.35), transparent 65%);
+            animation: drift 10s ease-in-out infinite;
         }
-        .footer-base img { height: 38px; width: auto; }
-        .footer-base a { color: var(--fog); text-decoration: none; font-family: var(--f-cond); font-weight: 600; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 8px; }
-        .footer-base a:hover { color: var(--steel); }
-        .footer-base svg { width: 20px; height: 20px; fill: currentColor; }
+        .cta-box > * { position: relative; }
+        .cta-box h2 { font-size: clamp(2.2rem, 5.5vw, 4.2rem); }
+        .cta-box p { color: #c6d2e3; font-size: 1.15rem; max-width: 48ch; margin: 0 auto 32px; }
+        .cta-box .hero-cta { justify-content: center; }
+        .footer { padding: 48px 0 40px; }
+        .footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+        .footer img { height: 36px; width: auto; }
+        .footer a { text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; transition: color .25s ease; }
+        .footer a:hover { color: var(--steel-light); }
+        .footer svg { width: 20px; height: 20px; fill: currentColor; }
+        .footer small { color: var(--muted); font-size: .9rem; }
 
-        /* WhatsApp flutuante */
+        /* Botões flutuantes */
         .wa-float {
             position: fixed;
             right: 22px; bottom: 22px;
@@ -633,408 +791,552 @@
             width: 60px; height: 60px;
             border-radius: 50%;
             background: var(--wa);
+            color: #06210f;
             display: grid; place-items: center;
-            box-shadow: 0 8px 24px rgba(16,21,39,.3);
-            transition: transform .2s ease;
+            animation: pulse 2.4s infinite;
+            transition: transform .3s var(--ease);
         }
-        .wa-float:hover { transform: scale(1.06); }
-        .wa-float svg { width: 32px; height: 32px; fill: var(--ink); }
+        .wa-float:hover { transform: scale(1.1); }
+        .wa-float svg { width: 32px; height: 32px; fill: currentColor; }
+        .progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 3px;
+            width: 100%;
+            z-index: 70;
+            background: var(--grad);
+            transform: scaleX(0);
+            transform-origin: left;
+        }
 
         /* =========================================
            RESPONSIVO
            ========================================= */
-        @media (max-width: 1024px) {
-            .nav-links { display: none; }
+        @media (max-width: 1080px) {
+            .nav-links, .nav .btn { display: none; }
             .nav-toggle { display: block; }
-            .nav .btn { display: none; }
-            .web-list, .clients { grid-template-columns: repeat(2, 1fr); }
+            .site-grid { grid-template-columns: repeat(2, 1fr); }
+            .clients { grid-template-columns: repeat(3, 1fr); }
         }
-        @media (max-width: 860px) {
-            .hero .wrap, .about-head, .row, .inpi .row, .faq .wrap { grid-template-columns: 1fr; }
-            .row.flip .media { order: 0; }
-            .index { grid-template-columns: 1fr; }
-            .steps { grid-template-columns: 1fr 1fr; row-gap: 40px; }
-            .swatches { height: 260px; }
+        @media (max-width: 880px) {
+            .hero { min-height: auto; padding-top: 120px; }
+            .hero .wrap, .site-feature, .ads, .faq-wrap, .duo { grid-template-columns: 1fr; }
+            .mock { margin-top: 30px; }
+            .brand-grid { grid-template-columns: 1fr; max-width: 560px; }
+            .timeline { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+            .timeline::before, .timeline::after { display: none; }
+            .clients { grid-template-columns: repeat(2, 1fr); }
+            .part-head { grid-template-columns: 1fr; gap: 0; }
         }
         @media (max-width: 560px) {
             body { font-size: 1rem; }
-            .hero h1 { margin-bottom: 36px; }
-            .hero-cta .btn { width: 100%; justify-content: center; }
-            .swatch { font-size: .82rem; padding: 10px 8px; }
-            .steps { grid-template-columns: 1fr; }
-            .web-list { grid-template-columns: 1fr; }
-            .clients { grid-template-columns: 1fr 1fr; }
-            .clients li { padding: 22px 16px; }
-            .clients .logo img { max-width: 120px; }
-            .spec li { grid-template-columns: 1fr; gap: 4px; }
-            .faq details p { padding-right: 0; }
+            .hero-cta .btn { width: 100%; }
+            .mock { height: 330px; }
+            .browser { width: 100%; }
+            .phone { width: 128px; right: -4px; bottom: -10px; }
+            .chip-a { left: 0; bottom: 4%; }
+            .chip-b { right: 0; top: -12%; }
+            .site-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: 1fr; }
+            .stat + .stat { border-left: 0; border-top: 1px solid var(--line); }
+            .client { padding: 20px 16px; }
+            .client .logo img { max-width: 110px; }
+            .acc-panel p { padding-right: 0; }
             .wa-float { width: 54px; height: 54px; right: 16px; bottom: 16px; }
         }
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation: none !important; transition: none !important; }
+            .hero h1 .w, .fade-in, .blk { opacity: 1 !important; transform: none !important; }
+            .typed { width: auto !important; }
+            .js .rv, .js .rv-l, .js .rv-r { opacity: 1; transform: none; }
             html { scroll-behavior: auto; }
         }
     </style>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <!-- Ícones reutilizáveis -->
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
         <symbol id="i-wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487 2.721 1.173 2.721.782 3.216.732.495-.05 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></symbol>
-        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 11h12.17l-5.59-5.59L12 4l8 8-8 8-1.41-1.41L16.17 13H4z"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
         <symbol id="i-folder" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></symbol>
     </svg>
 
-    <nav class="nav" aria-label="Principal">
+    <div class="progress" id="progress"></div>
+
+    <!-- MENU -->
+    <nav class="nav" id="nav" aria-label="Principal">
         <div class="wrap">
             <a href="#topo" class="nav-logo" aria-label="Camargo Tech & Design, voltar ao início"><img src="logo-camargo.png" alt="Camargo Tech & Design" width="624" height="255"></a>
             <ul class="nav-links">
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#branding">Branding</a></li>
+                <li><a href="#sites">Sites</a></li>
                 <li><a href="#redes-sociais">Redes sociais</a></li>
                 <li><a href="#trafego-pago">Tráfego pago</a></li>
-                <li><a href="#web-design">Sites</a></li>
+                <li><a href="#marca">Branding</a></li>
                 <li><a href="#clientes">Clientes</a></li>
                 <li><a href="#faq">Dúvidas</a></li>
             </ul>
             <a href="https://wa.me/5542998621712" class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Falar agora</a>
-            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
-        </div>
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="#servicos">Serviços</a>
-            <a href="#branding">Branding</a>
-            <a href="#redes-sociais">Redes sociais</a>
-            <a href="#trafego-pago">Tráfego pago</a>
-            <a href="#web-design">Sites</a>
-            <a href="#clientes">Clientes</a>
-            <a href="#faq">Dúvidas</a>
-            <a href="https://wa.me/5542998621712" target="_blank" rel="noopener" style="color:var(--wa)">Chamar no WhatsApp</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
         </div>
     </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#sites">Sites</a>
+        <a href="#redes-sociais">Redes sociais</a>
+        <a href="#trafego-pago">Tráfego pago</a>
+        <a href="#marca">Branding</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="https://wa.me/5542998621712" class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+    </div>
 
     <!-- HERO -->
     <header class="hero" id="topo">
+        <div class="orb o1"></div>
+        <div class="orb o2"></div>
         <div class="wrap">
             <div>
-                <p class="hero-place">Assessoria de marketing 360° em Ponta Grossa (PR) e para todo o Brasil</p>
-                <h1>Marketing que organiza e vende<span class="dot">.</span></h1>
-                <p class="hero-text">Branding, redes sociais, tráfego pago e sites cuidados por uma só equipe, do conceito da marca até a gráfica que imprime o seu uniforme.</p>
-                <div class="hero-cta">
-                    <a href="https://wa.me/5542998621712" class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Falar no WhatsApp</a>
-                    <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+                <span class="tag fade-in" style="animation-delay:.1s">Sites e redes sociais em Ponta Grossa e todo o Brasil</span>
+                <h1 id="heroTitle">Sites e redes sociais que <span class="grad-text">fazem sua empresa vender.</span></h1>
+                <p class="hero-text fade-in" style="animation-delay:1.1s">Criamos o site da sua empresa e cuidamos das suas redes sociais, com vídeos, anúncios e marca organizados por uma só equipe.</p>
+                <div class="hero-cta fade-in" style="animation-delay:1.3s">
+                    <a href="https://wa.me/5542998621712?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20site." class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Quero um site</a>
+                    <a href="#sites" class="btn btn-ghost">Ver serviços</a>
                 </div>
             </div>
-            <figure class="swatch-set">
-            <div class="swatches" aria-label="Paleta de cores da Camargo Tech & Design">
-                <div class="swatch">Ink<span>#101527</span></div>
-                <div class="swatch">Navy<span>#233652</span></div>
-                <div class="swatch">Aço<span>#83ACBD</span></div>
-                <div class="swatch">Névoa<span>#E6E6E6</span></div>
+
+            <div class="mock fade-in" style="animation-delay:.5s" aria-hidden="true">
+                <div class="browser">
+                    <div class="browser-bar"><i></i><i></i><i></i><div class="url">https://<span class="typed">suaempresa.com.br</span></div></div>
+                    <div class="screen">
+                        <div class="blk nav-b"></div>
+                        <div class="blk hero-b"><span></span><span></span><span></span></div>
+                        <div class="cards-b"><div class="blk"></div><div class="blk"></div><div class="blk"></div></div>
+                    </div>
+                </div>
+                <div class="phone">
+                    <div class="post-head"><i></i><span></span></div>
+                    <div class="post-img"></div>
+                    <div class="post-foot"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span id="likes">1.284</span></div>
+                </div>
+                <div class="float-chip chip-a">
+                    <span class="ic"><svg><use href="#i-wa"/></svg></span>
+                    <div>Novo contato<small>chegou pelo seu site</small></div>
+                </div>
+                <div class="float-chip chip-b">
+                    <span class="ic"><svg viewBox="0 0 24 24"><path d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/></svg></span>
+                    <div>4,6x de retorno<small>case real de anúncios</small></div>
+                </div>
             </div>
-            <figcaption class="swatch-caption">Nossa própria paleta, tirada do nosso manual de marca. É isso que entregamos para você.</figcaption>
-            </figure>
+        </div>
+
+        <div class="marquee fade-in" style="animation-delay:1.5s" aria-label="Clientes">
+            <div class="marquee-track">
+                <span>Lions Startups</span><span>Lions Dev</span><span>SOS Ponta Grossa</span><span>Sauvvitech</span><span>Atacadão da Paz</span><span>Dr. Joaquim Rosas</span><span>Casa Decor Lis</span><span>SS Garage Cars</span>
+                <span aria-hidden="true">Lions Startups</span><span aria-hidden="true">Lions Dev</span><span aria-hidden="true">SOS Ponta Grossa</span><span aria-hidden="true">Sauvvitech</span><span aria-hidden="true">Atacadão da Paz</span><span aria-hidden="true">Dr. Joaquim Rosas</span><span aria-hidden="true">Casa Decor Lis</span><span aria-hidden="true">SS Garage Cars</span>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- SOBRE + SERVIÇOS -->
-        <section class="about" id="servicos">
+        <!-- ===================== PARTE 01: SITES ===================== -->
+        <section class="sites" id="sites">
             <div class="wrap">
-                <div class="about-head">
-                    <div>
-                        <p class="kicker">Sobre nós</p>
-                        <h2>A gente arruma a casa da sua marca.</h2>
-                    </div>
-                    <div>
-                        <p>A Camargo Tech & Design oferece uma assessoria <strong>360°</strong>. Diferente de designers que entregam uma imagem e somem, nós cuidamos da saúde visual e organizacional do seu negócio.</p>
-                        <p>O trabalho vai da modernização da sua marca antiga até encontrar a gráfica mais barata para os seus uniformes.</p>
-                        <p class="punch">Para que a sua empresa transmita profissionalismo em cada detalhe.</p>
+                <div class="part-head">
+                    <span class="part-num rv" aria-hidden="true">01</span>
+                    <div class="rv" style="--d:.1s">
+                        <span class="tag">Sites</span>
+                        <h2>Sua empresa com um endereço <span class="grad-text">profissional na web.</span></h2>
+                        <p class="lead">Além das redes sociais, sua marca precisa de um lugar próprio na internet: um site que apresenta, convence e leva o cliente direto para o seu WhatsApp.</p>
                     </div>
                 </div>
 
-                <ul class="index">
-                    <li><a href="#branding"><strong>Branding</strong><small>Conceito, manual de marca e rebranding</small><span class="arrow"><svg><use href="#i-arrow"/></svg></span></a></li>
-                    <li><a href="#registro-marca"><strong>Registro de marca</strong><small>Análise de viabilidade e processo no INPI</small><span class="arrow"><svg><use href="#i-arrow"/></svg></span></a></li>
-                    <li><a href="#design-grafico"><strong>Design gráfico</strong><small>Impressos, fachadas e busca de gráficas</small><span class="arrow"><svg><use href="#i-arrow"/></svg></span></a></li>
-                    <li><a href="#videos"><strong>Edição de vídeos</strong><small>Reels e TikTok focados em retenção</small><span class="arrow"><svg><use href="#i-arrow"/></svg></span></a></li>
-                    <li><a href="#redes-sociais"><strong>Redes sociais</strong><small>Gestão mensal em ciclos (sprints)</small><span class="arrow"><svg><use href="#i-arrow"/></svg></span></a></li>
-                    <li><a href="#organizacao"><strong>Organização</strong><small>Portfólio empresarial com todos os arquivos</small><span class="arrow"><svg><use href="#i-arrow"/></svg></span></a></li>
-                    <li><a href="#trafego-pago"><strong>Tráfego pago</strong><small>Anúncios no Instagram, Facebook, TikTok e Google</small><span class="arrow"><svg><use href="#i-arrow"/></svg></span></a></li>
-                    <li><a href="#web-design"><strong>Sites</strong><small>Landing pages, sites e domínios</small><span class="arrow"><svg><use href="#i-arrow"/></svg></span></a></li>
-                </ul>
-
-                <p class="proof"><span><b>8</b>marcas atendidas</span><span><b>4,6x</b>de retorno em um case real de anúncios</span></p>
-            </div>
-        </section>
-
-        <!-- BRANDING -->
-        <section class="bg-white" id="branding">
-            <div class="wrap">
-                <div class="row">
-                    <div class="media plate"><img src="1%C2%AA%20Brandig.JPG" alt="Manual de marca com logo, paleta de cores e aplicações" width="1024" height="610" loading="lazy"></div>
-                    <div>
-                        <p class="kicker">Branding: conceito e estratégia</p>
-                        <h2>Por que a sua marca existe?</h2>
-                        <p>Antes de desenhar, a gente pensa. O manual de marca começa explicando o conceito por trás do símbolo.</p>
-                        <ul class="spec">
-                            <li><b>Significado da logo</b>O que ela representa na mente do seu cliente.</li>
-                            <li><b>Psicologia das cores</b>Por que azul e não vermelho? Mostramos como as cores influenciam a decisão de compra do seu público.</li>
-                            <li><b>Tom de voz</b>Como sua marca fala: séria, divertida ou técnica.</li>
-                        </ul>
-                        <p class="note">Uma marca com significado vende mais.</p>
-                    </div>
-                </div>
-
-                <div class="row flip">
-                    <div class="media plate"><img src="itens%20tecnicos.png" alt="Evolução de logos, aplicações da marca e códigos de cor" width="718" height="1024" loading="lazy"></div>
-                    <div>
-                        <p class="kicker">Branding: itens técnicos</p>
-                        <h2>Sua marca respeitada em qualquer lugar.</h2>
-                        <p>A parte prática que faz a logo funcionar do celular ao outdoor.</p>
-                        <ul class="spec">
-                            <li><b>Rebranding e vetorização</b>Sua logo em vetor (PDF/SVG). Amplia para um outdoor gigante sem perder qualidade.</li>
-                            <li><b>Códigos de cor (CMYK e RGB)</b>O mesmo tom na tela, no banner e no cartão de visita que a gráfica imprimir.</li>
-                            <li><b>Mockups</b>Sua marca em uniformes, carros e fachadas antes de você gastar com produção.</li>
-                            <li><b>Tipografia</b>As fontes oficiais da sua empresa.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- INPI -->
-        <section class="inpi" id="registro-marca">
-            <div class="wrap">
-                <div class="row">
-                    <div>
-                        <p class="kicker">Registro de marca</p>
-                        <h2>Proteja o seu patrimônio.</h2>
-                        <p>Investir em fachada e marketing sem o registro é construir casa em terreno alugado. Se a sua marca não está registrada no INPI, você corre risco.</p>
-                        <p>Nós cuidamos da análise de viabilidade e acompanhamos o processo até o fim.</p>
-                        <div class="inpi-logo"><img src="inpi.png" alt="INPI, Instituto Nacional da Propriedade Industrial" width="433" height="238" loading="lazy"></div>
-                    </div>
-                    <div class="risk">
-                        <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 14H11V9H13M13 18H11V16H13M1 21H23L12 2L1 21Z"/></svg>O risco real</h3>
-                        <blockquote>Se um concorrente registrar antes, você pode ser processado e obrigado a mudar de nome, perdendo a clientela.</blockquote>
-                        <a href="https://wa.me/5542998621712" class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Consultar minha marca</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DESIGN GRÁFICO + VÍDEOS -->
-        <section id="design-grafico">
-            <div class="wrap">
-                <div class="row">
-                    <div>
-                        <p class="kicker">Design gráfico e assessoria offline</p>
-                        <h2>Do digital ao mundo real.</h2>
-                        <p>Não criamos só a arte. Com a <strong>assessoria de produção</strong>, encontramos os melhores fornecedores e gráficas pelo menor custo.</p>
-                        <ul class="tags">
-                            <li>Cartões de visita</li>
-                            <li>Panfletos e folders</li>
-                            <li>Fachadas de loja</li>
-                            <li>Banners e faixas</li>
-                            <li>Adesivos para frota</li>
-                            <li>Uniformes</li>
-                        </ul>
-                    </div>
-                    <div class="media"><img src="mkt%20fisico.png" alt="Catálogo, agenda e cartões de visita impressos" width="1024" height="775" loading="lazy"></div>
-                </div>
-
-                <div class="row flip" id="videos">
-                    <div class="media phone"><img src="edicaodevideos.png" alt="Edição de vídeo vertical no celular" width="452" height="363" loading="lazy"></div>
-                    <div>
-                        <p class="kicker">Edição de vídeos</p>
-                        <h2>Vídeo conecta e vende muito mais.</h2>
-                        <p>Edição focada em retenção para Reels e TikTok: cortes rápidos, legendas dinâmicas, transições e músicas em alta.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- REDES SOCIAIS -->
-        <section class="sprints" id="redes-sociais">
-            <div class="wrap">
-                <p class="kicker networks">Gestão de redes sociais</p>
-                <h2>Constância sem correria, em ciclos.</h2>
-                <p class="lead">Instagram, TikTok, Facebook e LinkedIn com qualidade e regularidade. Trabalhamos com a metodologia de sprints: cada ciclo segue sempre as mesmas quatro etapas.</p>
-                <ol class="steps">
-                    <li><span class="num">1</span><h3>Planejamento</h3><p>Definição do tema da semana ou do mês.</p></li>
-                    <li><span class="num">2</span><h3>Produção</h3><p>Criação das artes e edição dos vídeos.</p></li>
-                    <li><span class="num">3</span><h3>Aprovação</h3><p>Você valida tudo antes de ir ao ar.</p></li>
-                    <li><span class="num">4</span><h3>Postagem</h3><p>Agendamento automático nas redes.</p></li>
-                </ol>
-                <p class="result">Resultado: <b>organização total</b> e zero estresse para você.</p>
-            </div>
-        </section>
-
-        <!-- ORGANIZAÇÃO -->
-        <section id="organizacao">
-            <div class="wrap">
-                <div class="row">
-                    <div class="media"><img src="organizacao.png" alt="Ilustração de pessoa organizando as redes sociais no computador" width="1024" height="878" loading="lazy"></div>
-                    <div>
-                        <p class="kicker">Portfólio empresarial</p>
-                        <h2>Nunca mais perca um arquivo.</h2>
-                        <p>Senhas, logos e artes antigas somem com o tempo. Nós centralizamos tudo em uma pasta única da sua marca:</p>
-                        <ul class="tree">
-                            <li><svg aria-hidden="true"><use href="#i-folder"/></svg><div><b>Marca</b>Todas as variações de logo e o manual.</div></li>
-                            <li><svg aria-hidden="true"><use href="#i-folder"/></svg><div><b>Marketing</b>Histórico de artes e vídeos criados.</div></li>
-                            <li><svg aria-hidden="true"><use href="#i-folder"/></svg><div><b>Acessos</b>Documento seguro com logins e senhas.</div></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TRÁFEGO PAGO -->
-        <section class="bg-white" id="trafego-pago">
-            <div class="wrap">
-                <div class="row">
-                    <div>
-                        <p class="kicker">Tráfego pago</p>
-                        <h2>Anúncios que voltam em vendas.</h2>
-                        <p>Gestão estratégica de anúncios no Instagram, Facebook, TikTok e Google, com foco total no retorno sobre o investimento.</p>
-                        <div class="case">
-                            <h3>Case real: varejo com loja física</h3>
-                            <div class="bar-row">
-                                <div class="bar-label"><span>Investimento</span><b>~R$ 3.000/mês</b></div>
-                                <div class="bar in" role="img" aria-label="Investimento de cerca de 3 mil reais por mês"><i></i></div>
-                            </div>
-                            <div class="bar-row">
-                                <div class="bar-label"><span>Retorno na loja</span><b>~R$ 14.000/mês</b></div>
-                                <div class="bar out" role="img" aria-label="Retorno de cerca de 14 mil reais por mês"><i></i></div>
-                            </div>
-                            <div class="roi"><b>4,6x</b><span>de retorno sobre o investimento</span></div>
-                        </div>
-                    </div>
-                    <div class="media plate"><img src="trafegopago.png" alt="Ícones de Instagram, Facebook e Google" width="1024" height="977" loading="lazy"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SITES -->
-        <section id="web-design">
-            <div class="wrap">
-                <div class="web-head">
-                    <div>
-                        <p class="kicker">Presença digital</p>
-                        <h2>Um endereço profissional na web.</h2>
-                        <p class="lead">Além das redes sociais, sua marca precisa de um lugar próprio na internet.</p>
-                    </div>
-                    <a href="https://wa.me/5542998621712" class="btn btn-ink" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Orçar meu site</a>
-                </div>
-                <ul class="web-list">
-                    <li>
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 1,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 1,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 1,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 1,0 14,12A2,2 0 0,0 12,10Z"/></svg>
+                <div class="site-grid">
+                    <article class="card rv" style="--d:0s">
+                        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 1,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 1,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 1,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 1,0 14,12A2,2 0 0,0 12,10Z"/></svg></div>
                         <h3>Landing pages</h3>
-                        <p>Páginas de alta conversão focadas em vendas, ideais para tráfego pago.</p>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19,4H5A2,2 0 0,0 3,6V18A2,2 0 0,0 5,20H19A2,2 0 0,0 21,18V6A2,2 0 0,0 19,4M19,18H5V8H19V18M7,10H12V16H7V10M14,10H17V12H14V10M14,14H17V16H14V14Z"/></svg>
+                        <p>Páginas de alta conversão focadas em vendas, ideais para campanhas de tráfego pago.</p>
+                    </article>
+                    <article class="card rv" style="--d:.1s">
+                        <div class="icon"><svg viewBox="0 0 24 24"><path d="M19,4H5A2,2 0 0,0 3,6V18A2,2 0 0,0 5,20H19A2,2 0 0,0 21,18V6A2,2 0 0,0 19,4M19,18H5V8H19V18M7,10H12V16H7V10M14,10H17V12H14V10M14,14H17V16H14V14Z"/></svg></div>
                         <h3>Sites institucionais</h3>
-                        <p>Apresente sua empresa e seus serviços em um ambiente profissional.</p>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17,1H7A2,2 0 0,0 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3A2,2 0 0,0 17,1M17,19H7V5H17V19Z"/></svg>
+                        <p>Apresente sua empresa e seus serviços em um ambiente profissional e confiável.</p>
+                    </article>
+                    <article class="card rv" style="--d:.2s">
+                        <div class="icon"><svg viewBox="0 0 24 24"><path d="M17,1H7A2,2 0 0,0 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3A2,2 0 0,0 17,1M17,19H7V5H17V19Z"/></svg></div>
                         <h3>Design responsivo</h3>
-                        <p>Layouts modernos que funcionam bem no celular e no computador.</p>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.66 9.66,10H14.34C14.44,10.66 14.5,11.32 14.5,12C14.5,12.68 14.44,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+                        <p>Layouts modernos que funcionam bem no celular, no tablet e no computador.</p>
+                    </article>
+                    <article class="card rv" style="--d:.3s">
+                        <div class="icon"><svg viewBox="0 0 24 24"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.960,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.66 9.66,10H14.34C14.44,10.66 14.5,11.32 14.5,12C14.5,12.68 14.44,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg></div>
                         <h3>Domínio próprio</h3>
                         <p>Registro do nome da sua empresa (ex.: .com.br) para passar autoridade.</p>
-                    </li>
-                </ul>
+                    </article>
+                </div>
+
+                <div class="site-feature">
+                    <div class="devices rv-l" aria-hidden="true">
+                        <div class="laptop"><i class="l-nav"></i><i class="l-hero"></i><div class="l-row"><i></i><i></i><i></i></div></div>
+                        <div class="mini-phone"><i></i><i></i><i></i><i></i></div>
+                        <div class="wa-bubble"><svg><use href="#i-wa"/></svg></div>
+                    </div>
+                    <div class="rv-r">
+                        <h2>Um site pronto para <span class="grad-text">trazer clientes.</span></h2>
+                        <p class="lead">Nada de site parado. Ele é pensado para quem chega pelo Google, pelo Instagram ou por um anúncio.</p>
+                        <ul class="checks">
+                            <li><svg><use href="#i-check"/></svg>Botão direto para o seu WhatsApp</li>
+                            <li><svg><use href="#i-check"/></svg>Perfeito no celular e no computador</li>
+                            <li><svg><use href="#i-check"/></svg>Domínio .com.br com o nome da sua empresa</li>
+                            <li><svg><use href="#i-check"/></svg>Pronto para receber tráfego pago</li>
+                        </ul>
+                        <a href="https://wa.me/5542998621712?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20site." class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Orçar meu site</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- CLIENTES -->
-        <section class="bg-white" id="clientes">
+        <!-- ===================== PARTE 02: REDES SOCIAIS E MARKETING ===================== -->
+        <section class="social" id="redes-sociais">
             <div class="wrap">
-                <p class="kicker">Clientes e experiência</p>
-                <h2>Marcas que confiam no nosso trabalho.</h2>
+                <div class="part-head">
+                    <span class="part-num rv" aria-hidden="true">02</span>
+                    <div class="rv" style="--d:.1s">
+                        <span class="tag">Redes sociais e marketing</span>
+                        <h2>Suas redes cuidadas <span class="grad-text">do post ao anúncio.</span></h2>
+                        <p class="lead">Instagram, TikTok, Facebook e LinkedIn com constância, vídeos que prendem a atenção, anúncios com foco em retorno e todos os arquivos da marca organizados.</p>
+                    </div>
+                </div>
+
+                <!-- Gestão de redes -->
+                <div class="block">
+                    <div class="block-head rv">
+                        <h3>Gestão de redes sociais em ciclos (sprints)</h3>
+                        <p>Para garantir consistência e qualidade, cada ciclo segue sempre as mesmas quatro etapas.</p>
+                    </div>
+                    <div class="timeline" id="timeline">
+                        <div class="step rv" style="--d:0s">
+                            <div class="step-dot" style="--dd:.3s"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg></div>
+                            <span class="step-num">Etapa 1</span>
+                            <h3>Planejamento</h3>
+                            <p>Definição do tema da semana ou do mês.</p>
+                        </div>
+                        <div class="step rv" style="--d:.15s">
+                            <div class="step-dot" style="--dd:.8s"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></div>
+                            <span class="step-num">Etapa 2</span>
+                            <h3>Produção</h3>
+                            <p>Criação das artes e edição dos vídeos.</p>
+                        </div>
+                        <div class="step rv" style="--d:.3s">
+                            <div class="step-dot" style="--dd:1.3s"><svg><use href="#i-check"/></svg></div>
+                            <span class="step-num">Etapa 3</span>
+                            <h3>Aprovação</h3>
+                            <p>Você valida tudo antes de ir ao ar.</p>
+                        </div>
+                        <div class="step rv" style="--d:.45s">
+                            <div class="step-dot" style="--dd:1.8s"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></div>
+                            <span class="step-num">Etapa 4</span>
+                            <h3>Postagem</h3>
+                            <p>Agendamento automático nas redes.</p>
+                        </div>
+                    </div>
+                    <p class="result rv">Resultado: <span class="grad-text">organização total e zero estresse</span> para você.</p>
+                </div>
+
+                <!-- Vídeos + Organização -->
+                <div class="block duo" id="videos">
+                    <article class="card rv-l">
+                        <div class="icon"><svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg></div>
+                        <h3>Edição de vídeos</h3>
+                        <p>Vídeos conectam e vendem muito mais. Edição focada em retenção para Reels e TikTok.</p>
+                        <ul class="pills"><li>Cortes rápidos</li><li>Legendas dinâmicas</li><li>Transições</li><li>Músicas em alta</li></ul>
+                        <div class="video-media">
+                            <img src="edicaodevideos.png" alt="Edição de vídeo vertical no celular" width="452" height="363" loading="lazy">
+                            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                        </div>
+                    </article>
+                    <article class="card rv-r" id="organizacao">
+                        <div class="icon"><svg><use href="#i-folder"/></svg></div>
+                        <h3>Organização de arquivos</h3>
+                        <p>Senhas, logos e artes antigas se perdem com o tempo. Criamos o <strong>portfólio empresarial</strong> da sua marca: uma pasta central com tudo o que importa.</p>
+                        <ul class="tree">
+                            <li class="rv" style="--d:.2s"><svg><use href="#i-folder"/></svg><div><b>Pasta de marca</b><span>Todas as variações de logo e o manual.</span></div></li>
+                            <li class="rv" style="--d:.35s"><svg><use href="#i-folder"/></svg><div><b>Pasta de marketing</b><span>Histórico de artes e vídeos criados.</span></div></li>
+                            <li class="rv" style="--d:.5s"><svg><use href="#i-folder"/></svg><div><b>Acessos</b><span>Documento seguro com logins e senhas.</span></div></li>
+                        </ul>
+                        <p style="margin-top:22px"><strong>Você nunca mais vai perder um arquivo importante.</strong></p>
+                    </article>
+                </div>
+
+                <!-- Tráfego pago -->
+                <div class="block ads" id="trafego-pago">
+                    <div class="rv-l">
+                        <div class="block-head" style="margin-bottom:28px">
+                            <h3>Tráfego pago: anúncios que voltam em vendas</h3>
+                            <p>Gestão estratégica de anúncios no Instagram, Facebook, TikTok e Google, com foco total no retorno sobre o investimento.</p>
+                        </div>
+                        <div class="card ads-case" id="adsCase">
+                            <p style="color:var(--steel-light); font-weight:700; margin-bottom:22px">Case real: varejo com loja física</p>
+                            <div class="bar-row">
+                                <div class="bar-label">Investimento <span>~R$ 3.000/mês</span></div>
+                                <div class="bar in-b" role="img" aria-label="Investimento de cerca de 3 mil reais por mês"><i></i></div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label">Retorno na loja <span>~R$ 14.000/mês</span></div>
+                                <div class="bar out-b" role="img" aria-label="Retorno de cerca de 14 mil reais por mês"><i></i></div>
+                            </div>
+                            <div class="roi"><b class="grad-text count" data-target="4.6" data-decimals="1" data-suffix="x">4,6x</b><span>de retorno sobre o investimento</span></div>
+                        </div>
+                    </div>
+                    <div class="ads-img rv-r"><img src="trafegopago.png" alt="Ícones de Instagram, Facebook e Google" width="1024" height="977" loading="lazy"></div>
+                </div>
+
+                <!-- Marca e materiais -->
+                <div class="block" id="marca">
+                    <div class="block-head rv">
+                        <h3>Marca e materiais</h3>
+                        <p>Para as redes e o site funcionarem, a marca precisa estar forte, protegida e bem aplicada em tudo.</p>
+                    </div>
+                    <div class="brand-grid">
+                        <article class="card rv" style="--d:0s" id="branding">
+                            <div class="brand-img"><img src="1%C2%AA%20Brandig.JPG" alt="Manual de marca com logo, paleta de cores e aplicações" width="1024" height="610" loading="lazy"></div>
+                            <div class="brand-body">
+                                <h3>Branding e rebranding</h3>
+                                <p>Antes de desenhar, a gente pensa. O manual de marca explica o conceito por trás do símbolo.</p>
+                                <ul class="mini-list">
+                                    <li>Significado da logo e psicologia das cores</li>
+                                    <li>Tom de voz da marca</li>
+                                    <li>Logo em vetor (PDF/SVG) e cores em CMYK e RGB</li>
+                                    <li>Mockups em uniformes, carros e fachadas</li>
+                                    <li>Tipografia oficial da empresa</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="card rv" style="--d:.12s" id="registro-marca">
+                            <div class="brand-img contain"><img src="inpi.png" alt="INPI, Instituto Nacional da Propriedade Industrial" width="433" height="238" loading="lazy"></div>
+                            <div class="brand-body">
+                                <h3>Registro de marca (INPI)</h3>
+                                <p>Investir em fachada e marketing sem o registro é construir casa em terreno alugado. Fazemos a análise de viabilidade e acompanhamos o processo.</p>
+                                <div class="warn"><b>O risco real:</b> se um concorrente registrar antes, você pode ser processado e obrigado a mudar de nome, perdendo a clientela.</div>
+                            </div>
+                        </article>
+                        <article class="card rv" style="--d:.24s" id="design-grafico">
+                            <div class="brand-img"><img src="mkt%20fisico.png" alt="Catálogo, agenda e cartões de visita impressos" width="1024" height="775" loading="lazy"></div>
+                            <div class="brand-body">
+                                <h3>Design gráfico e impressos</h3>
+                                <p>Não criamos só a arte: com a assessoria de produção, encontramos as gráficas com o menor custo.</p>
+                                <ul class="pills"><li>Cartões de visita</li><li>Panfletos e folders</li><li>Fachadas</li><li>Banners e faixas</li><li>Adesivos para frota</li><li>Uniformes</li></ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NÚMEROS + CLIENTES -->
+        <section id="clientes">
+            <div class="wrap">
+                <div class="stats rv">
+                    <div class="stat"><b class="grad-text count" data-target="8">8</b><span>marcas atendidas</span></div>
+                    <div class="stat"><b class="grad-text count" data-target="4.6" data-decimals="1" data-suffix="x">4,6x</b><span>de retorno em anúncios</span></div>
+                    <div class="stat"><b class="grad-text count" data-target="360" data-suffix="°">360°</b><span>de assessoria para a sua marca</span></div>
+                </div>
+
+                <div style="margin-top:clamp(72px,9vw,110px)" class="rv">
+                    <span class="tag">Clientes</span>
+                    <h2>Marcas que confiam no nosso trabalho.</h2>
+                </div>
                 <ul class="clients">
-                    <li><div class="logo"><img src="logo_lions_startups.png" alt="Lions Startups" loading="lazy"></div><h3>Lions Startups</h3><p>Foco empresarial e conexões B2B.</p></li>
-                    <li><div class="logo"><img src="logo_lions_dev.png" alt="Lions Dev" loading="lazy"></div><h3>Lions Dev</h3><p>Captação de alunos para cursos de tecnologia.</p></li>
-                    <li><div class="logo"><img src="sos%20pg.png" alt="SOS Ponta Grossa" loading="lazy"></div><h3>SOS, Obras Sociais</h3><p>Divulgação de cursos e ações sociais.</p></li>
-                    <li><div class="logo"><img src="Logo%20_%20Sauvvi%20Tech.png" alt="Sauvvi Tech" loading="lazy"></div><h3>Sauvvitech</h3><p>Health tech em ascensão no mercado.</p></li>
-                    <li><div class="logo"><img src="Logo_atacadao.png" alt="Atacadão da Paz" loading="lazy"></div><h3>Atacadão da Paz</h3><p>Varejo e atacado de produtos de limpeza.</p></li>
-                    <li><div class="logo"><img src="Logo_joaquimrosas.jpg" alt="Dr. Joaquim Rosas" loading="lazy"></div><h3>Dr. Joaquim Rosas</h3><p>Advogado em Família e Sucessões, especialista em Planejamento Patrimonial Familiar.</p></li>
-                    <li><div class="logo"><img src="Logo_casadecorlis.png" alt="Casa Decor Lis" loading="lazy"></div><h3>Casa Decor Lis</h3><p>Móveis planejados em metalon e MDF.</p></li>
-                    <li><div class="logo"><img src="https://ss-garage-cars.netlify.app/logo.jpeg" alt="SS Garage Cars" loading="lazy"></div><h3>SS Garage Cars</h3><p>Oficina mecânica.</p></li>
+                    <li class="client rv" style="--d:0s"><div class="logo"><img src="logo_lions_startups.png" alt="Lions Startups" loading="lazy"></div><h3>Lions Startups</h3><p>Foco empresarial e conexões B2B.</p></li>
+                    <li class="client rv" style="--d:.06s"><div class="logo"><img src="logo_lions_dev.png" alt="Lions Dev" loading="lazy"></div><h3>Lions Dev</h3><p>Captação de alunos para cursos de tecnologia.</p></li>
+                    <li class="client rv" style="--d:.12s"><div class="logo"><img src="sos%20pg.png" alt="SOS Ponta Grossa" loading="lazy"></div><h3>SOS Obras Sociais</h3><p>Divulgação de cursos e ações sociais.</p></li>
+                    <li class="client rv" style="--d:.18s"><div class="logo"><img src="Logo%20_%20Sauvvi%20Tech.png" alt="Sauvvi Tech" loading="lazy"></div><h3>Sauvvitech</h3><p>Health tech em ascensão no mercado.</p></li>
+                    <li class="client rv" style="--d:0s"><div class="logo"><img src="Logo_atacadao.png" alt="Atacadão da Paz" loading="lazy"></div><h3>Atacadão da Paz</h3><p>Varejo e atacado de produtos de limpeza.</p></li>
+                    <li class="client rv" style="--d:.06s"><div class="logo"><img src="Logo_joaquimrosas.jpg" alt="Dr. Joaquim Rosas" loading="lazy"></div><h3>Dr. Joaquim Rosas</h3><p>Advogado em Família e Sucessões, especialista em Planejamento Patrimonial Familiar.</p></li>
+                    <li class="client rv" style="--d:.12s"><div class="logo"><img src="Logo_casadecorlis.png" alt="Casa Decor Lis" loading="lazy"></div><h3>Casa Decor Lis</h3><p>Móveis planejados em metalon e MDF.</p></li>
+                    <li class="client rv" style="--d:.18s"><div class="logo"><img src="https://ss-garage-cars.netlify.app/logo.jpeg" alt="SS Garage Cars" loading="lazy"></div><h3>SS Garage Cars</h3><p>Oficina mecânica.</p></li>
                 </ul>
             </div>
         </section>
 
         <!-- FAQ -->
-        <section class="faq" id="faq">
-            <div class="wrap">
-                <div>
-                    <p class="kicker">Dúvidas frequentes</p>
-                    <h2>Antes de chamar a gente.</h2>
-                    <p class="lead">Não achou sua resposta? Pergunte direto no WhatsApp.</p>
+        <section id="faq" style="padding-top:0">
+            <div class="wrap faq-wrap">
+                <div class="rv">
+                    <span class="tag">Dúvidas</span>
+                    <h2>Perguntas frequentes</h2>
+                    <p>Não achou sua resposta? Pergunte direto no WhatsApp.</p>
                 </div>
-                <div class="faq-list">
-                    <details>
-                        <summary>Quanto tempo leva para ver resultados nas redes sociais?</summary>
-                        <p>Trabalhamos com sprints mensais focados em consistência. Os primeiros resultados de organização e identidade visual aparecem já no primeiro ciclo; o crescimento de engajamento e vendas costuma ser progressivo, conforme a constância das publicações.</p>
-                    </details>
-                    <details>
-                        <summary>Vocês atendem empresas de outras cidades ou estados?</summary>
-                        <p>Sim. Grande parte do atendimento é feita remotamente, com reuniões online e aprovação de materiais pelo WhatsApp, sem perder a proximidade.</p>
-                    </details>
-                    <details>
-                        <summary>Como funciona o registro de marca no INPI?</summary>
-                        <p>Fazemos a análise de viabilidade do nome e acompanhamos todo o processo junto ao INPI. O prazo final depende do órgão federal, mas cuidamos de cada etapa para você não perder nenhum detalhe.</p>
-                    </details>
-                    <details>
-                        <summary>Preciso fechar um plano fixo mensal?</summary>
-                        <p>Não necessariamente. Temos projetos pontuais (como um rebranding ou um site) e também acompanhamento recorrente por sprints, conforme a necessidade da sua empresa.</p>
-                    </details>
-                    <details>
-                        <summary>Vocês também cuidam da produção gráfica (impressão)?</summary>
-                        <p>Sim. Oferecemos assessoria de produção: buscamos as gráficas com o melhor custo-benefício para uniformes, banners, cartões e fachadas.</p>
-                    </details>
+                <div class="acc rv" style="--d:.1s">
+                    <div class="acc-item">
+                        <button class="acc-btn" aria-expanded="false">Quanto tempo leva para o meu site ficar pronto?<span class="pm" aria-hidden="true"></span></button>
+                        <div class="acc-panel"><div><p>Depende do tamanho do projeto: uma landing page é mais rápida que um site institucional completo. No orçamento pelo WhatsApp já passamos o prazo para o seu caso.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <button class="acc-btn" aria-expanded="false">Quanto tempo leva para ver resultados nas redes sociais?<span class="pm" aria-hidden="true"></span></button>
+                        <div class="acc-panel"><div><p>Trabalhamos com sprints mensais focados em consistência. Os primeiros resultados de organização e identidade visual aparecem já no primeiro ciclo; o crescimento de engajamento e vendas costuma ser progressivo, conforme a constância das publicações.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <button class="acc-btn" aria-expanded="false">Vocês atendem empresas de outras cidades ou estados?<span class="pm" aria-hidden="true"></span></button>
+                        <div class="acc-panel"><div><p>Sim. Grande parte do atendimento é feita remotamente, com reuniões online e aprovação de materiais pelo WhatsApp, sem perder a proximidade.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <button class="acc-btn" aria-expanded="false">Preciso fechar um plano fixo mensal?<span class="pm" aria-hidden="true"></span></button>
+                        <div class="acc-panel"><div><p>Não necessariamente. Temos projetos pontuais (como um site ou um rebranding) e também acompanhamento recorrente por sprints, conforme a necessidade da sua empresa.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <button class="acc-btn" aria-expanded="false">Como funciona o registro de marca no INPI?<span class="pm" aria-hidden="true"></span></button>
+                        <div class="acc-panel"><div><p>Fazemos a análise de viabilidade do nome e acompanhamos todo o processo junto ao INPI. O prazo final depende do órgão federal, mas cuidamos de cada etapa para você não perder nenhum detalhe.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <button class="acc-btn" aria-expanded="false">Vocês também cuidam da produção gráfica (impressão)?<span class="pm" aria-hidden="true"></span></button>
+                        <div class="acc-panel"><div><p>Sim. Oferecemos assessoria de produção: buscamos as gráficas com o melhor custo-benefício para uniformes, banners, cartões e fachadas.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section id="contato" style="padding-top:0">
+            <div class="wrap">
+                <div class="cta-box rv">
+                    <h2>Vamos tirar sua empresa <span class="grad-text">do papel?</span></h2>
+                    <p>Conte o que você precisa, seja um site, as redes sociais ou os dois, e a gente monta o plano ideal.</p>
+                    <div class="hero-cta">
+                        <a href="https://wa.me/5542998621712" class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+                        <a href="https://www.instagram.com/camargotechdesign" class="btn btn-ghost" target="_blank" rel="noopener">Ver o Instagram</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- CTA FINAL -->
-    <footer class="footer" id="contato">
+    <footer class="footer">
         <div class="wrap">
-            <h2>Vamos organizar sua marca<span class="dot">?</span></h2>
-            <p class="footer-text">Conte o que a sua empresa precisa e a gente monta o plano para estruturar o crescimento.</p>
-            <a href="https://wa.me/5542998621712" class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
-
-            <div class="footer-base">
-                <img src="logo-camargo.png" alt="Camargo Tech & Design" width="624" height="255" loading="lazy">
-                <a href="https://www.instagram.com/camargotechdesign" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
-                    @camargotechdesign
-                </a>
-                <span>© 2026 Camargo Tech & Design</span>
-            </div>
+            <img src="logo-camargo.png" alt="Camargo Tech & Design" width="624" height="255" loading="lazy">
+            <a href="https://www.instagram.com/camargotechdesign" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
+                @camargotechdesign
+            </a>
+            <small>© 2026 Camargo Tech & Design</small>
         </div>
     </footer>
 
     <a href="https://wa.me/5542998621712" class="wa-float" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
     <script>
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Título do hero entrando palavra por palavra
+        (function () {
+            const h1 = document.getElementById('heroTitle');
+            let i = 0;
+            // Cada palavra vira um span animado; palavras do trecho em degradê recebem o degradê nelas mesmas
+            const wrapWords = (node, grad) => {
+                [...node.childNodes].forEach(child => {
+                    if (child.nodeType === 3) {
+                        const frag = document.createDocumentFragment();
+                        child.textContent.split(/(\s+)/).forEach(part => {
+                            if (!part) return;
+                            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+                            const s = document.createElement('span');
+                            s.className = grad ? 'w grad-text' : 'w';
+                            s.style.animationDelay = (0.25 + i++ * 0.09) + 's' + (grad ? ', 0s' : '');
+                            s.textContent = part;
+                            frag.appendChild(s);
+                        });
+                        child.replaceWith(frag);
+                    } else if (child.nodeType === 1) {
+                        const isGrad = child.classList.contains('grad-text');
+                        if (isGrad) child.classList.remove('grad-text');
+                        wrapWords(child, grad || isGrad);
+                    }
+                });
+            };
+            wrapWords(h1);
+        })();
+
+        // Menu fixo, barra de progresso e link ativo
+        const nav = document.getElementById('nav');
+        const progress = document.getElementById('progress');
+        const links = [...document.querySelectorAll('.nav-links a')];
+        const targets = links.map(a => document.querySelector(a.getAttribute('href')));
+        const onScroll = () => {
+            const y = window.scrollY;
+            nav.classList.toggle('scrolled', y > 30);
+            const max = document.documentElement.scrollHeight - innerHeight;
+            progress.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+            let current = -1;
+            targets.forEach((t, idx) => { if (t && t.getBoundingClientRect().top < 140) current = idx; });
+            links.forEach((a, idx) => a.classList.toggle('active', idx === current));
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
         // Menu mobile
         const navToggle = document.getElementById('navToggle');
         const mobileMenu = document.getElementById('mobileMenu');
-        navToggle.addEventListener('click', () => {
-            const open = mobileMenu.classList.toggle('open');
+        const setMenu = (open) => {
+            navToggle.classList.toggle('open', open);
+            mobileMenu.classList.toggle('open', open);
             navToggle.setAttribute('aria-expanded', open);
-            navToggle.textContent = open ? 'Fechar' : 'Menu';
+            document.body.style.overflow = open ? 'hidden' : '';
+        };
+        navToggle.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+        // Contadores animados
+        const runCount = (el) => {
+            const target = parseFloat(el.dataset.target);
+            const dec = parseInt(el.dataset.decimals || '0', 10);
+            const suffix = el.dataset.suffix || '';
+            const fmt = v => v.toFixed(dec).replace('.', ',') + suffix;
+            if (reduced) { el.textContent = fmt(target); return; }
+            const start = performance.now();
+            const dur = 1600;
+            const tick = (now) => {
+                const p = Math.min((now - start) / dur, 1);
+                el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)));
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        };
+
+        // Revelar elementos ao rolar
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                e.target.classList.add('in');
+                e.target.querySelectorAll('.count').forEach(runCount);
+                io.unobserve(e.target);
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.rv, .rv-l, .rv-r, #timeline, #adsCase').forEach(el => io.observe(el));
+
+        // Brilho que segue o mouse nos cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('pointermove', (e) => {
+                const r = card.getBoundingClientRect();
+                card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+                card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+            });
         });
-        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            navToggle.setAttribute('aria-expanded', 'false');
-            navToggle.textContent = 'Menu';
-        }));
+
+        // Curtidas subindo no post do hero
+        const likes = document.getElementById('likes');
+        let n = 1284;
+        if (!reduced) setInterval(() => { n += Math.floor(Math.random() * 4) + 1; likes.textContent = n.toLocaleString('pt-BR'); }, 900);
+
+        // Perguntas frequentes
+        document.querySelectorAll('.acc-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.acc-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.acc-btn').setAttribute('aria-expanded', 'false');
+                });
+                if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+            });
+        });
     </script>
 </body>
 </html>
