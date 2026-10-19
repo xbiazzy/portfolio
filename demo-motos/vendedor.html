@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Área do vendedor · Rota 376 Motos</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">376</span>
+      <span><b data-loja="nome">Rota 376</b><small>Área do vendedor</small></span>
+    </a>
+    <nav class="nav" aria-label="Atalhos" style="display:flex">
+      <a href="index.html" target="_blank" rel="noopener">Ver o site</a>
+    </nav>
+    <button class="btn btn-ghost" id="sair" type="button" hidden>Sair</button>
+  </div>
+</header>
+
+<div class="restrict" role="note">
+  <div class="wrap">
+    <b>Área restrita.</b>
+    <span>Esta página não aparece no site para o cliente: não tem link no menu e só abre com usuário e senha da loja.</span>
+  </div>
+</div>
+
+<main>
+  <section class="login" id="tela-login">
+    <form class="login-card" id="form-login" novalidate>
+      <p class="eyebrow">Acesso da loja</p>
+      <h1>Entrar no painel</h1>
+      <p>Use o acesso da equipe para cadastrar, editar e remover veículos do catálogo.</p>
+      <div class="hint">Acesso de demonstração<br>usuário: <span id="hint-user"></span> · senha: <span id="hint-pass"></span></div>
+      <div class="f w6"><label for="l-usuario">Usuário</label><input id="l-usuario" autocomplete="username" autocapitalize="none"></div>
+      <div class="f w6"><label for="l-senha">Senha</label><input id="l-senha" type="password" autocomplete="current-password"></div>
+      <p class="err" id="l-erro" role="alert"></p>
+      <button class="btn btn-wa" type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <section class="panel" id="tela-painel" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Cadastro de veículo</p>
+          <h2>Como alimentar o catálogo</h2>
+          <p>Cada veículo novo entra no site a partir desta ficha. Preencha, confira a prévia e publique. O card aparece no estoque com as fotos, o preço e as condições.</p>
+        </div>
+      </div>
+      <div class="how">
+        <div><span class="eyebrow">Passo 1</span><b>Preencha a ficha</b><p>Marca, modelo, ano, km, preço e as condições de pagamento.</p></div>
+        <div><span class="eyebrow">Passo 2</span><b>Anexe as fotos</b><p>De 4 a 8 fotos na horizontal: lado direito, lado esquerdo, frente, traseira, painel e motor.</p></div>
+        <div><span class="eyebrow">Passo 3</span><b>Publique</b><p>O veículo entra no topo do estoque. Vendeu? Remova na lista abaixo.</p></div>
+      </div>
+
+      <div class="seller-grid">
+        <form class="ficha" id="ficha" novalidate>
+          <fieldset>
+            <legend>Identificação</legend>
+            <div class="f"><label for="f-tipo">Tipo</label><select id="f-tipo"><option value="moto">Moto</option><option value="carro">Carro</option></select></div>
+            <div class="f"><label for="f-marca">Marca</label><input id="f-marca" value="Honda" autocomplete="off"></div>
+            <div class="f"><label for="f-modelo">Modelo</label><input id="f-modelo" value="XRE 300" autocomplete="off"></div>
+            <div class="f w4"><label for="f-versao">Versão / motor</label><input id="f-versao" value="Sahara ABS" autocomplete="off"></div>
+            <div class="f"><label for="f-ano">Ano fab./modelo</label><input id="f-ano" value="2023/2024"></div>
+          </fieldset>
+          <fieldset>
+            <legend>Ficha técnica</legend>
+            <div class="f"><label for="f-km">Quilometragem</label><input id="f-km" value="9800" inputmode="numeric"></div>
+            <div class="f"><label for="f-cambio">Câmbio</label><select id="f-cambio"><option>Manual 5 marchas</option><option>Manual 6 marchas</option><option>CVT (scooter)</option><option>Automático</option><option>Manual</option></select></div>
+            <div class="f"><label for="f-comb">Combustível</label><select id="f-comb"><option>Flex</option><option>Gasolina</option><option>Diesel</option><option>Híbrido</option><option>Elétrico</option></select></div>
+            <div class="f"><label for="f-cor">Cor</label><input id="f-cor" value="Vermelho" autocomplete="off"></div>
+            <div class="f w4"><label for="f-placa">Final da placa</label><input id="f-placa" value="7" maxlength="1" inputmode="numeric"></div>
+          </fieldset>
+          <fieldset>
+            <legend>Preço e condições</legend>
+            <div class="f"><label for="f-preco">Preço à vista (R$)</label><input id="f-preco" value="25900" inputmode="numeric"></div>
+            <div class="f"><label for="f-entrada">Entrada mínima (R$)</label><input id="f-entrada" value="7800" inputmode="numeric"></div>
+            <div class="f"><label for="f-parcelas">Parcelas</label><input id="f-parcelas" value="36x de R$ 690" autocomplete="off"></div>
+            <div class="checks" role="group" aria-label="Diferenciais">
+              <label><input type="checkbox" id="c-troca" checked> Aceita troca</label>
+              <label><input type="checkbox" id="c-ipva" checked> IPVA pago</label>
+              <label><input type="checkbox" id="c-dono"> Único dono</label>
+              <label><input type="checkbox" id="c-rev" checked> Revisões em dia</label>
+              <label><input type="checkbox" id="c-laudo" checked> Laudo cautelar aprovado</label>
+              <label><input type="checkbox" id="c-garantia"> Garantia de 3 meses</label>
+            </div>
+            <div class="f w6"><label for="f-obs">Observações</label><textarea id="f-obs">Pneus novos, protetor de motor e baú de 45 litros.</textarea></div>
+          </fieldset>
+          <fieldset>
+            <legend>Fotos</legend>
+            <div class="drop" id="drop">
+              <input type="file" id="f-fotos" accept="image/*" multiple aria-label="Escolher fotos do veículo">
+              <strong>Toque para escolher as fotos</strong> ou arraste aqui<br>
+              <span class="note">A primeira foto vira a capa do card.</span>
+              <div class="thumbs" id="thumbs"></div>
+            </div>
+          </fieldset>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-wa">Publicar no catálogo</button>
+            <button type="button" class="btn btn-ghost" id="copy-btn">Copiar ficha em texto</button>
+          </div>
+          <p class="note">Demonstração: o anúncio fica salvo só neste navegador. Na versão final, ele vai para o banco de dados da loja e aparece para todo mundo.</p>
+        </form>
+
+        <aside class="preview-col" aria-label="Prévia">
+          <span class="lbl">Prévia do card no site</span>
+          <div id="preview"></div>
+          <div class="template">
+            <span class="lbl">Ficha em texto, para mandar pelo WhatsApp</span>
+            <pre id="tpl"></pre>
+          </div>
+        </aside>
+      </div>
+
+      <div class="mine">
+        <div class="section-head"><div><p class="eyebrow">Publicados por você</p><h2 style="font-size:32px">Seus anúncios</h2></div></div>
+        <p class="note" id="mine-empty">Nenhum anúncio publicado ainda. Preencha a ficha acima e toque em "Publicar no catálogo".</p>
+        <div class="mine-list" id="mine-list"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="dados.js"></script>
+<script src="comum.js"></script>
+<script src="painel.js"></script>
+</body>
+</html>

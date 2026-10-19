@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rota 376 Motos · Demonstração</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Protótipo de catálogo online para loja de motos seminovas, criado pela Camargo Tech & Design.">
+<meta property="og:title" content="Rota 376 Motos · Protótipo de catálogo">
+<meta property="og:description" content="Catálogo online com fotos, preços, condições e botão direto para o WhatsApp.">
+<meta property="og:image" content="https://camargotechdesign.com.br/demo-motos/img/gs-1.jpg">
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">376</span>
+      <span><b data-loja="nome">Rota 376</b><small data-loja="sub">Motos seminovas</small></span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#estoque">Estoque</a>
+      <a href="#destaque">Destaque</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-wa wa-general" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.1 5.1 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+      <span>Falar no WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Ponta Grossa · PR · Saída da BR-376</p>
+        <h1>Sua próxima moto, <em>revisada e pronta pra rodar.</em></h1>
+        <p class="lede">Street, trail, big trail e esportivas com procedência conferida, revisão feita e fotos reais de cada unidade. Escolha pelo catálogo e fale direto com o vendedor.</p>
+        <div class="ctas">
+          <a class="btn btn-wa" href="#estoque">Ver estoque</a>
+          <a class="btn btn-ghost wa-general" href="#" target="_blank" rel="noopener">Simular financiamento</a>
+        </div>
+        <div class="facts">
+          <div><b class="num" data-total>8</b>no estoque</div>
+          <div><b>Revisão</b>feita antes da venda</div>
+          <div><b>até 48x</b>financiamento</div>
+        </div>
+      </div>
+      <div class="mosaic" id="mosaico" aria-label="Veículos em destaque"></div>
+    </div>
+  </section>
+
+  <section class="feature" id="destaque" aria-labelledby="dest-title">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Destaque da semana</p>
+        <h2 id="dest-title">Honda CB 500X</h2>
+        <div class="price num" id="dest-price"></div>
+        <div class="tabs" id="dest-tabs" role="tablist" aria-label="Ângulo da foto"></div>
+        <p class="tab-text" id="dest-text"></p>
+        <div class="ctas" style="margin-top:18px"><a class="btn btn-wa" id="dest-wa" href="#" target="_blank" rel="noopener">Quero esse</a></div>
+      </div>
+      <div class="stage" id="dest-stage"></div>
+    </div>
+  </section>
+
+  <section class="catalog" id="estoque" aria-labelledby="estoque-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Catálogo</p>
+          <h2 id="estoque-title">Estoque disponível</h2>
+          <p>Deslize as fotos de cada veículo. O botão abre o WhatsApp com o modelo já escrito na mensagem.</p>
+        </div>
+        <div class="chips" role="group" aria-label="Filtrar estoque">
+          <button class="chip" data-f="todos" aria-pressed="true">Todos</button>
+          <button class="chip" data-f="moto" aria-pressed="false">Motos</button>
+          <button class="chip" data-f="carro" aria-pressed="false">Carros</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>Nenhum veículo nessa categoria no momento.</p>
+    </div>
+  </section>
+</main>
+
+<footer id="contato">
+  <div class="wrap">
+    <div><b data-loja="nome" style="color:var(--fg)">Rota 376</b> · Ponta Grossa, PR · WhatsApp <span data-loja="whatsTexto">(42) 90000-0000</span> (fictício)</div>
+    <div class="demo">
+      <strong>Protótipo de demonstração criado pela <a href="https://camargotechdesign.com.br" target="_blank" rel="noopener">Camargo Tech &amp; Design</a>.</strong>
+      Loja, preços, condições e número de WhatsApp são fictícios. As fotos são de motos e carros reais publicados no Wikimedia Commons sob licenças Creative Commons.
+      <br><br>Para ver como a loja cadastra os veículos, abra a <a href="vendedor.html">área do vendedor</a>. No site final esse link não aparece para o cliente.
+    </div>
+    <details>
+      <summary>Créditos das fotos</summary>
+      <ul id="credits"></ul>
+    </details>
+  </div>
+</footer>
+
+<script src="dados.js"></script>
+<script src="comum.js"></script>
+<script src="catalogo.js"></script>
+</body>
+</html>
