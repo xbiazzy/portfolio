@@ -298,8 +298,11 @@ footer{padding-block:30px 110px;font-size:.86rem;color:var(--muted)}
 .fab .t{max-width:0;white-space:nowrap;overflow:hidden;transition:max-width .6s var(--ease),padding .6s var(--ease)}
 .fab:hover .t,.fab.peek .t{max-width:220px;padding-right:22px}
 
-.dot{position:fixed;left:0;top:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:70;mix-blend-mode:multiply;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),opacity .3s ease;opacity:0}
-.dot.big{width:54px;height:54px;margin:-27px 0 0 -27px;opacity:.35}
+.dot{position:fixed;left:0;top:0;width:34px;height:22px;margin:-11px 0 0 -17px;pointer-events:none;z-index:70;opacity:0;transition:opacity .3s ease}
+.dot svg{width:100%;height:100%;display:block;opacity:.6;filter:drop-shadow(0 2px 4px rgba(184,58,90,.35));transform-origin:center;transition:transform .45s var(--ease),opacity .3s ease}
+.dot.big svg{transform:scale(1.7) rotate(-8deg);opacity:.75}
+.dot.kiss svg{animation:kiss .5s var(--ease)}
+@keyframes kiss{50%{transform:scale(1.25,.8)}}
 @media (hover:none){.dot{display:none}}
 
 
@@ -434,7 +437,7 @@ footer{padding-block:30px 110px;font-size:.86rem;color:var(--muted)}
   </defs>
 </svg>
 
-<div class="dot" id="dot" aria-hidden="true"></div>
+<div class="dot" id="dot" aria-hidden="true"><svg viewBox="0 0 60 36"><path d="M2 17 C10 6 20 2 30 9 C40 2 50 6 58 17 C48 21 12 21 2 17 Z" fill="#e8607e"/><path d="M2 17 C12 21 48 21 58 17 C50 32 10 32 2 17 Z" fill="#f07592"/><path d="M4 17 C14 20 46 20 56 17" fill="none" stroke="#b83a5a" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="30" cy="25" rx="9" ry="2.6" fill="#fff" opacity=".55"/><ellipse cx="22" cy="10" rx="4" ry="1.4" fill="#fff" opacity=".45"/></svg></div>
 
 <header class="top" id="top">
   <div class="wrap bar">
@@ -785,6 +788,7 @@ footer{padding-block:30px 110px;font-size:.86rem;color:var(--muted)}
   if(!reduce && matchMedia('(hover:hover)').matches){
     var dot=document.getElementById('dot'),mx=0,my=0,dx=0,dy=0;
     addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.opacity=1;},{passive:true});
+    addEventListener('mousedown',function(){dot.classList.remove('kiss');void dot.offsetWidth;dot.classList.add('kiss');});
     (function loop(){dx+=(mx-dx)*.18;dy+=(my-dy)*.18;dot.style.transform='translate('+dx+'px,'+dy+'px)';requestAnimationFrame(loop);})();
     document.addEventListener('mouseover',function(e){dot.classList.toggle('big',!!e.target.closest('a,button,.spot'));});
     document.addEventListener('mousemove',function(e){var b=e.target.closest('.wa');[].forEach.call(document.querySelectorAll('.wa'),function(o){if(o!==b)o.style.transform='';});if(!b)return;var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.15)+'px,'+((e.clientY-r.top-r.height/2)*.25)+'px)';});
