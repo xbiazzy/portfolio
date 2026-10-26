@@ -34,16 +34,27 @@
 
 <main>
   <section class="login" id="tela-login">
-    <form class="login-card" id="form-login" novalidate>
-      <p class="eyebrow">Acesso da loja</p>
-      <h1>Entrar no painel</h1>
-      <p>Use o acesso da equipe para cadastrar, editar e remover veículos do catálogo.</p>
-      <div class="hint">Acesso de demonstração<br>usuário: <span id="hint-user"></span> · senha: <span id="hint-pass"></span></div>
-      <div class="f w6"><label for="l-usuario">Usuário</label><input id="l-usuario" autocomplete="username" autocapitalize="none"></div>
-      <div class="f w6"><label for="l-senha">Senha</label><input id="l-senha" type="password" autocomplete="current-password"></div>
-      <p class="err" id="l-erro" role="alert"></p>
-      <button class="btn btn-wa" type="submit">Entrar</button>
-    </form>
+    <div class="login-box">
+      <div class="login-side">
+        <span class="brand-mark">376</span>
+        <p class="eyebrow">Acesso da loja</p>
+        <h1>Painel do vendedor</h1>
+        <p>Cadastre, atualize e remova veículos do catálogo. O que você publicar aqui aparece no site na hora.</p>
+        <ul class="login-list">
+          <li>Ficha com fotos, preço e condições</li>
+          <li>Prévia do card antes de publicar</li>
+          <li>Lista dos anúncios para tirar os vendidos</li>
+        </ul>
+      </div>
+      <form class="login-form" id="form-login" novalidate>
+        <h2>Entrar</h2>
+        <div class="hint"><b>Acesso de demonstração</b><br>usuário <span id="hint-user"></span> · senha <span id="hint-pass"></span></div>
+        <div class="field"><label for="l-usuario">Usuário</label><input id="l-usuario" autocomplete="username" autocapitalize="none"></div>
+        <div class="field"><label for="l-senha">Senha</label><input id="l-senha" type="password" autocomplete="current-password"></div>
+        <p class="err" id="l-erro" role="alert"></p>
+        <button class="btn btn-wa" type="submit">Entrar no painel</button>
+      </form>
+    </div>
   </section>
 
   <section class="panel" id="tela-painel" hidden>
