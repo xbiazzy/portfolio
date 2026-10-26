@@ -147,7 +147,10 @@ footer li{margin-bottom:4px;break-inside:avoid}
 .restrict .wrap{display:flex;gap:10px;align-items:center;padding-block:10px;flex-wrap:wrap}
 .restrict b{color:var(--warn)}
 .login{min-height:calc(100vh - 140px);display:grid;place-items:center;padding-block:40px}
-.login-card{width:min(420px,100%);background:var(--navy-900);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;gap:16px}
+.login-card{width:min(420px,100%);background:var(--navy-900);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.login-card>*{grid-column:1/-1;min-width:0}
+.login-card .btn{width:100%}
+@media (max-width:480px){.login-card{padding:22px 18px}.login-card h1{font-size:30px}}
 .login-card h1{font-size:34px;text-transform:uppercase;font-weight:800;line-height:1}
 .login-card p{margin:0;color:var(--muted);font-size:14px}
 .hint{font-family:var(--font-mono);font-size:12px;background:var(--navy-950);border:1px dashed var(--gold-lo);border-radius:8px;padding:10px 12px;color:var(--gold-hi)}
