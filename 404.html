@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Página não encontrada · Camargo Tech &amp; Design</title>
+<meta name="description" content="Esta página não existe. Volte ao site da Camargo Tech &amp; Design ou fale com a gente pelo WhatsApp.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0b1022">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Mesma identidade do site: azul-marinho, azul-aço e Plus Jakarta Sans.
+   Todos os caminhos começam com "/" porque esta página aparece em qualquer endereço que não existe. */
+:root{
+  --bg:#0b1022; --bg-2:#101527; --surface:#151f38; --surface-2:#1b2945;
+  --steel:#83acbd; --steel-light:#a8cddc;
+  --text:#eef2f8; --muted:#a9b5cb;
+  --line:rgba(131,172,189,.16); --line-strong:rgba(131,172,189,.35);
+  --wa:#25d366; --wa-hover:#1ebe5d;
+  --grad:linear-gradient(135deg,#a8cddc 0%,#83acbd 45%,#4f7fa0 100%);
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%}
+body{min-height:100%;margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;overflow-x:hidden}
+a{color:var(--steel-light);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--steel-light);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--steel-light);color:#000;padding:8px 14px;border-radius:8px;z-index:9}
+.skip:focus{left:16px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px;width:100%}
+
+/* Topo */
+header{border-bottom:1px solid var(--line);padding:16px 0;background:var(--bg);position:relative;z-index:2}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand img{height:40px;width:auto;display:block}
+.back{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+.back:hover{color:var(--text)}
+
+/* Conteúdo */
+main{flex:1;position:relative;display:flex;align-items:center;padding:56px 0 72px;overflow:hidden}
+main::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse at 70% 45%,#000 0%,transparent 65%);mask-image:radial-gradient(ellipse at 70% 45%,#000 0%,transparent 65%);opacity:.6}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.orb.o1{width:480px;height:480px;top:-140px;right:-100px;background:rgba(79,127,160,.45);animation:drift 14s ease-in-out infinite}
+.orb.o2{width:380px;height:380px;bottom:-160px;left:-120px;background:rgba(35,54,82,.9);animation:drift 18s ease-in-out infinite reverse}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,30px) scale(1.1)}}
+
+.grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,80px);align-items:center}
+.code{display:block;font-size:clamp(5.5rem,16vw,10rem);font-weight:800;line-height:.85;letter-spacing:-.06em;margin-bottom:14px;
+  background:var(--grad);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:gradMove 6s ease-in-out infinite}
+@keyframes gradMove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+h1{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:0 0 14px;text-wrap:balance}
+.lead{color:var(--muted);font-size:1.12rem;max-width:44ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font);font-weight:700;font-size:1rem;text-decoration:none;padding:14px 26px;border-radius:999px;border:1.5px solid transparent;transition:transform .25s var(--ease),background-color .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:22px;height:22px;fill:currentColor;flex-shrink:0}
+.btn-light{background:var(--text);color:var(--bg)}
+.btn-light:hover{background:#fff}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-hover)}
+
+.links h2{font-size:.95rem;font-weight:800;margin:0 0 12px}
+.links ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.links a{display:inline-block;color:var(--text);text-decoration:none;font-size:.92rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line-strong);background:rgba(131,172,189,.06);transition:background-color .25s ease,border-color .25s ease}
+.links a:hover{background:rgba(131,172,189,.16);border-color:var(--steel-light)}
+
+/* Navegador animado: digita o endereço errado e mostra o 404 */
+.browser{background:var(--surface);border:1px solid var(--line-strong);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.5);overflow:hidden;animation:floatY 7s ease-in-out infinite}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--bg-2)}
+.bar i{width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.bar i:nth-child(1){background:#ff6b6b}.bar i:nth-child(2){background:#ffd166}.bar i:nth-child(3){background:#06d6a0}
+.url{margin-left:10px;flex:1;min-width:0;font-size:.82rem;font-weight:600;color:var(--muted);background:var(--surface);border-radius:999px;padding:5px 14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.url b{color:var(--steel-light);font-weight:700}
+.caret{display:inline-block;width:2px;height:1em;vertical-align:-2px;margin-left:1px;background:var(--steel-light);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.screen{position:relative;padding:22px;min-height:260px;display:grid;place-items:center}
+.ghost{position:absolute;inset:22px;display:grid;grid-template-rows:16px 1fr 56px;gap:12px;opacity:.35}
+.ghost i{border-radius:10px;background:var(--surface-2)}
+.ghost .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ghost .row i{height:100%}
+.notfound{position:relative;text-align:center;opacity:0;transform:scale(.9);animation:popIn .6s var(--ease) 1.6s forwards}
+@keyframes popIn{to{opacity:1;transform:none}}
+.notfound .icon{width:72px;height:72px;margin:0 auto 14px;border-radius:20px;display:grid;place-items:center;background:var(--bg);border:1px solid var(--line-strong);animation:wobble 3.2s ease-in-out 2.4s infinite}
+.notfound .icon svg{width:36px;height:36px;fill:var(--steel-light)}
+@keyframes wobble{0%,100%{transform:rotate(0)}10%{transform:rotate(-10deg)}20%{transform:rotate(8deg)}30%{transform:rotate(-4deg)}40%{transform:rotate(0)}}
+.notfound b{display:block;font-size:1.25rem;font-weight:800;letter-spacing:-.02em}
+.notfound span{display:block;color:var(--muted);font-size:.9rem}
+
+/* Rodapé */
+footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:13px;position:relative;z-index:2;background:var(--bg)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--text)}
+.a11y{display:inline-flex;align-items:center;gap:6px}
+.a11y svg{width:16px;height:16px}
+
+@media (max-width:860px){
+  .grid{grid-template-columns:1fr}
+  .browser{max-width:520px}
+  main{padding:36px 0 56px}
+}
+@media (max-width:480px){
+  .cta .btn{width:100%}
+  .screen{min-height:200px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .notfound{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Camargo Tech &amp; Design, página inicial"><img src="/logo-camargo.png" alt="Camargo Tech &amp; Design" width="624" height="255"></a>
+    <a class="back" href="/">← Voltar ao site</a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <div class="orb o1" aria-hidden="true"></div>
+  <div class="orb o2" aria-hidden="true"></div>
+  <div class="wrap grid">
+    <div>
+      <span class="code" aria-hidden="true">404</span>
+      <h1>Essa página não existe.</h1>
+      <p class="lead">O link pode estar errado ou a página mudou de lugar. Mas a gente continua aqui para colocar o seu negócio na internet.</p>
+      <div class="cta">
+        <a class="btn btn-light" href="/">Voltar ao início</a>
+        <a class="btn btn-wa" href="https://wa.me/5542998621712?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487 2.721 1.173 2.721.782 3.216.732.495-.05 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <nav class="links" aria-label="Páginas do site">
+        <h2>Talvez você esteja procurando:</h2>
+        <ul>
+          <li><a href="/#sites">Criação de sites</a></li>
+          <li><a href="/#trafego-pago">Tráfego pago</a></li>
+          <li><a href="/#redes-sociais">Redes sociais</a></li>
+          <li><a href="/#clientes">Clientes</a></li>
+          <li><a href="/#faq">Dúvidas</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="browser" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><div class="url">camargotechdesign.com.br<b id="path"></b><span class="caret"></span></div></div>
+      <div class="screen">
+        <div class="ghost"><i></i><i></i><div class="row"><i></i><i></i><i></i></div></div>
+        <div class="notfound">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM7 9h5v1H7z"/></svg></div>
+          <b>Página não encontrada</b>
+          <span>Esse endereço não leva a lugar nenhum.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> Camargo Tech &amp; Design · CNPJ 64.529.959/0001-00</span>
+    <nav aria-label="Documentos legais">
+      <a href="/privacidade.html">Política de Privacidade</a>
+      <a href="/termos.html">Termos de Uso</a>
+      <a class="a11y" href="/termos.html#acessibilidade"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="12" cy="4" r="2"/><path d="M21 9h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg> Acessibilidade</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // Digita no navegador o endereço que a pessoa tentou abrir (como texto, nunca como HTML)
+  (function () {
+    var el = document.getElementById('path');
+    var tentativa = location.pathname || '/';
+    try { tentativa = decodeURIComponent(tentativa); } catch (e) {}
+    if (tentativa.length > 40) tentativa = tentativa.slice(0, 39) + '…';
+    var reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduzir) { el.textContent = tentativa; return; }
+    var i = 0;
+    var t = setInterval(function () {
+      i++;
+      el.textContent = tentativa.slice(0, i);
+      if (i >= tentativa.length) clearInterval(t);
+    }, Math.max(30, Math.min(90, 1300 / tentativa.length)));
+  })();
+</script>
+</body>
+</html>
