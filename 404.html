@@ -6,8 +6,8 @@
   // Endereços que não existem dentro do site da CJB mostram a página 404 da própria CJB
   (function () {
     var p = location.pathname;
-    if (/^\/cjb-estetica(\/|$)/i.test(p) && !/\/cjb-estetica\/404\.html$/i.test(p)) {
-      location.replace('/cjb-estetica/404.html?de=' + encodeURIComponent(p));
+    if (/^\/cjb-estetica(\/|$)/i.test(p)) {
+      location.replace('https://cjbestetica.com.br' + (p.replace(/^\/cjb-estetica/i, '') || '/') + location.search + location.hash);
     }
   })();
 </script>
